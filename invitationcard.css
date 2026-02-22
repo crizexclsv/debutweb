@@ -83,7 +83,7 @@ body {
     margin-left: 170px;
     font-size: 90px;
     font-family: 'Great Vibes', cursive;
-    color: lch(34.65% 59.11 359.13);
+    color: lch(29.95% 53 358.12);
     text-shadow: 10px 10px 10px lab(28.99% 2.54 0.91);
     animation: fadeInUp 2s forwards;
 }
