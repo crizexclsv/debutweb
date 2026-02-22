@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    background-image: url(bgflo.jpg);
+    background-position: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(228, 23, 23);
+    font-family: 'Great Vibes', cursive;
+    font-size: 75px;
+    text-shadow: 1px 5px 4px  #080707;
+    animation: fadeInUp 2s forwards;
+}
+
+h2 {
+    font-size: 45px;
+    font-family: 'Great Vibes', cursive;
+    color: rgb(39, 27, 27);
+    text-shadow: 1px 5px 4px  #857777f7;
+    animation: fadeInUp 2s forwards;
+    text-align: center;
+}
+
+.scene {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.envelope {
+  top: 10px;
+  position: relative;
+  width: 360px;
+  height: 240px;
+  margin: auto;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.env-back {
+  position: absolute;
+  inset: 0;
+  background: #bd1212;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px rgb(8, 8, 8);
+  z-index: 1;
+}
+
+.env-pocket {
+  position: absolute;
+  inset: 0;
+  background: hsla(0, 88%, 45%, 0.945);
+  background-position: center;
+  border-radius: 20px;
+  clip-path: polygon(0 5%, 50% 70%, 100% 5%, 100% 100%, 0 100%);
+  z-index: 1; 
+  pointer-events: none;
+}
+
+.letter {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  height: 230px;
+  top: 10px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  transform: translateY(20px); 
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s, opacity 0.4s ease 0.6s;
+  z-index: 3;
+}
+
+.env-front {
+  position: absolute;
+  inset: 0;
+  background: url('Screenshot_2026-02-09_220541-removebg-preview.png');
+  background-size: 420px;
+  transform-origin: top;
+  transform-style: preserve-3d;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+   z-index: 5;
+}
+
+.env-front::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f6070786;
+  clip-path: polygon(0 0, 100% 0, 50% 65%);
+  backface-visibility: hidden;
+  z-index: 2;
+  transition: filter 1.2s ease;
+}
+
+.env-front::after {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, 100% 0, 50% 65%);
+  transform: rotateX(180deg); 
+  backface-visibility: hidden;
+}
+
+.seal {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: url('pngtree-vector-red-wax-seal-png-image_12805774-removebg-preview-removebg-preview.png');
+  background-position: center;
+  background-size: 150%;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.245);
+  cursor: pointer;
+  transition: transform .4s ease, opacity .4s ease;
+}
+
+.hint {
+  margin-top: 50px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: #000000;
+  text-shadow: 1px 7px 4px  #5a5151;
+  animation: fadeInUp 2s forwards;
+}
+
+.open .env-front {
+   transform: rotateX(125deg) translateY(-5px);
+  transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+}
+
+.open .env-front::before {
+  filter: brightness(0.8);
+}
+
+.open .seal {
+  transform: translateX(-50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.open .letter {
+  transform: translateY(-220px);
+  opacity: 1;
+}
+
+.seal:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/*  ANIMATION  */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+  .envelope { width: 280px; height: 190px; }
+  .open .letter { transform: translateY(-160px); }
+}
