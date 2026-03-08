@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-const debutDate = new Date("Mar 14, 2026 12:00:00").getTime();
+const debutDate = new Date("Mar 26, 2026 12:00:00").getTime();
 
 setInterval(() => {
 
@@ -30,3 +30,13 @@ setInterval(() => {
   document.getElementById("seconds").innerText = seconds;
 }, 1000);
 
+
+const cards = document.querySelectorAll('.namecontainer');
+
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const id = card.getAttribute('data-id');
+    alert(`You clicked on card ${id}!`);
+  });
+});

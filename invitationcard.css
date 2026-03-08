@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +18,7 @@ body {
 }
 
 .pageone {
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -51,37 +52,37 @@ body {
     text-align: left;
     margin-top: 40px;
     margin-left: 100px;
-    font-size: 65px;
+    font-size: 6rem;
     font-family: 'Great Vibes', cursive;
     color: lch(28.56% 61.53 37.08);
-    text-shadow: 10px 10px 10px hwb(0, 42%, 56%);
+    text-shadow: 10px 10px 10px hwb(0 57% 39%);
     animation: fadeInUp 2s forwards;
 }
     
  #invite {
-    margin-left: 120px;
-    font-size: 30px;
+    margin-left: 8.5%;
+    font-size: 2.0rem;
     font-family: 'Great Vibes', cursive;
     color: rgb(87, 60, 60);
-    text-shadow: 10px 10px 10px hwb(0, 42%, 56%);
+    text-shadow: 10px 10px 10px hwb(0 52% 45%);
     animation: fadeInUp 2s forwards;
 }
 
 #greetings {
     text-align: left;
     margin-top: 20px;
-    margin-left: 100px;
-    font-size: 100px;
+    margin-left: 8.5%;
+    font-size: 6rem;
     font-family: 'Great Vibes', cursive;
     color: #da1154;
-    text-shadow: 10px 10px 10px hwb(0, 24%, 75%);
+    text-shadow: 10px 10px 10px rgb(110, 105, 105);
     animation: fadeInUp 2s forwards;
 }
 
 #bday {
     text-align: left;
-    margin-left: 170px;
-    font-size: 90px;
+    margin-left: 14.5%;
+    font-size: 6rem;
     font-family: 'Great Vibes', cursive;
     color: lch(29.95% 53 358.12);
     text-shadow: 10px 10px 10px lab(28.99% 2.54 0.91);
@@ -89,10 +90,11 @@ body {
 }
 
 .frame {
-  margin-bottom: 300px;
-  top: 100px;
-  right: 130px;
-  width: 300px;
+  margin-bottom: 30px  auto;
+  top: 15%;
+  right: 10%;
+  width: 100%;
+  max-width: 300px;
   height: 380px;
   background-image: url('Screenshot_2026-02-13_014606-removebg-preview.png');
   position: absolute;
@@ -100,6 +102,7 @@ body {
   background-repeat: no-repeat;
   animation: fadeInUp 2s forwards;
 }
+
 /*  ANIMATION  */
 @keyframes fadeInUp {
     0% {
@@ -249,46 +252,108 @@ body {
 
 
 .pagethree {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(135deg, #ff6026 0%, #4b0d01 100%);
     scroll-snap-align: start;
     padding: 20px;
     box-sizing: border-box;
 }
 
-.text-container2 {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
 .card {
+    width: 900px;
+    height: 400px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f8cdda, #fbd3e9, #c2e9fb);
     position: relative;
-    top: 90px;
-    left: -300px;
-    right: 20px;
-    width: 200px;
-    margin-bottom: 10px;
-    animation: fadeInUp 2s forwards;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.card .right img {
-    width: 100%;
-    height: auto;
-    display: block;
+.title-badge {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(253, 125, 225);
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 3px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+.title-badge h1 {
+        margin: 0;
+        font-size: 20px;
+        font-family: 'Segoe UI', sans-serif;
+        color: #000000;
+        text-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+    }
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.qr-section img {
+    width: 200px;
+    height: 200px;
+    border: 3px solid white;
+    padding: 1px;
+    background: white;
+}
+
+.details {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.details h3 {
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.details p {
+    color: black;
+    font-size: 20px;
+    font-family: 'Segoe UI',  sans-serif;
+    margin: 3px 0;
+}
+
+.view-map {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: 'Segoe UI',  sans-serif;
+    text-decoration: none;
+    color: black !important;
+    font-weight: bold;
+}
+
+.preview img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+
+
 
 .pagefour {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     background: linear-gradient(135deg, #ff9a9e 0%, #da13da 100%);
     scroll-snap-align: start;
@@ -297,34 +362,115 @@ body {
 }
 
 .text-container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     text-align: center;
-    margin: 0 auto;
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.9);
+    margin-top: 40px;
+    margin-bottom: 100px;
+    max-width: 700px;
+    font-family: 'Segoe UI',  sans-serif;
     padding: 40px;
     border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.back-btn {
-    margin-top: 20px;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-family: 'Playfair Display', serif;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-    border: none;
-    border-radius: 25px;
-    color: #000000;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.text-container3 h1,
+.text-container3 h2 {
+    margin: 5px 0;
+    color: #900d0d;
 }
 
-.back-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+/* Cards container - positioned outside text container */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
-.back-btn:active {
-    transform: translateY(0);
+.card {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; 
+    color: white;
+    cursor: pointer; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.card a {
+    color: white;
+    text-decoration: none;
+}
+
+.card.red{
+  width: 240px;
+  height: 140px;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #9a2828 , #0f0d0d );
+  color: white;  
+  transform: scale(0.9);
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card.blue{
+  width: 240px;
+  height: 140px;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #4471e2, #03000c);
+  color: white;
+
+  transform: scale(0.9);
+  opacity: 0.6;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card.green{
+  width: 240px;
+  height: 140px;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #01ff2f, #03000c);
+  color: white;
+
+  transform: scale(0.9);
+  opacity: 0.6;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.card:hover {
+  transform: scale(1.03);
+  opacity: 1;
+  z-index: 5;
+}
+
+
+.card h3, .card p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.card:hover h3 {
+  letter-spacing: 4px;
+}
+.card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:focus {
+    outline: none;
 }
