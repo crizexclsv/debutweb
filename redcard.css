@@ -24,6 +24,7 @@ body::before {
 
 /* floral background */
 .background{
+    background-image:url("ki.jpg");
     background-size:cover;
     background-position:center;
     min-height:100vh;
