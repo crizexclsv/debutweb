@@ -4,7 +4,7 @@ body{
     background-image: url('ki.jpg');
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    position: relative;
 }
 
 body::before {
@@ -17,9 +17,7 @@ body::before {
     background-image: url('ki.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(10px);
-    -webkit-filter: blur(3.5px);
-    z-index: -1;
+    filter: blur(3px);
 }
 
 /* floral background */
