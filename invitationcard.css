@@ -30,7 +30,7 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 .pageone::before {
@@ -252,15 +252,66 @@ body {
 
 
 .pagethree {
-    min-height: 100vh;
+     min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    background-image: url('ki.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -1;
+}
+
+
+
+.pagethree::before {
+     content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('ki.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+.text-container2 {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    width: fit-content;
+    align-self: center;
+    padding-top: 10vh;
+}
+
+.fullscreen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ff6026 0%, #4b0d01 100%);
-    scroll-snap-align: start;
-    padding: 20px;
-    box-sizing: border-box;
+    z-index: 100;
+    cursor: pointer;
 }
+
+.fullscreen-img {
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+}
+
 
 .card {
     width: 900px;
@@ -344,7 +395,9 @@ body {
     object-fit: cover;
     border-radius: 10px;
     border: 3px solid rgb(0, 0, 0);
+    cursor: pointer;
 }
+
 
 
 
@@ -369,7 +422,8 @@ body {
     margin-top: 40px;
     margin-bottom: 100px;
     max-width: 700px;
-    font-family: 'Segoe UI',  sans-serif;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 1px;
     padding: 40px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.9);
@@ -378,9 +432,10 @@ body {
 
 .text-container3 h1,
 .text-container3 h2 {
-    margin: 5px 0;
-    color: #900d0d;
+    margin: px 0;
+    color: #38001c;
 }
+
 
 /* Cards container - positioned outside text container */
 .cards {
@@ -449,8 +504,34 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.card.pink{
+  width: 240px;
+  height: 140px;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fc80dd, #3d003a);
+  color: white;
+  transform: scale(0.9);
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-.card:hover {
+.card.violet{
+  width: 240px;
+  height: 140px;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #c204b2, #360020);
+  color: white;
+  transform: scale(0.9);
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.cards .card:hover {
   transform: scale(1.03);
   opacity: 1;
   z-index: 5;
@@ -463,10 +544,10 @@ body {
     text-align: center;
 }
 
-.card:hover h3 {
+.cards .card:hover h3 {
   letter-spacing: 4px;
 }
-.card:hover p {
+.cards .card:hover p {
   opacity: 1;
   transform: translateY(0);
 }

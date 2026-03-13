@@ -33,10 +33,29 @@ setInterval(() => {
 
 const cards = document.querySelectorAll('.namecontainer');
 
-
 cards.forEach(card => {
   card.addEventListener('click', () => {
     const id = card.getAttribute('data-id');
     alert(`You clicked on card ${id}!`);
   });
+});
+
+// Fullscreen map image
+document.addEventListener('DOMContentLoaded', () => {
+  const mapImg = document.getElementById('map-img');
+  if (mapImg) {
+    mapImg.addEventListener('click', () => {
+      const modal = document.createElement('div');
+      modal.className = 'fullscreen-modal';
+      const img = document.createElement('img');
+      img.src = mapImg.src;
+      img.className = 'fullscreen-img';
+      modal.appendChild(img);
+      document.body.appendChild(modal);
+      modal.addEventListener('click', () => modal.remove());
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.remove();
+      }, {once: true});
+    });
+  }
 });
