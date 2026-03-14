@@ -1,0 +1,114 @@
+body{
+    margin:0;
+    font-family: 'Libre Baskerville', serif;
+    background-image: url('ki.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('ki.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3  px);
+}
+
+/* floral background */
+.background{
+    background-image:url("ki.jpg");
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* parchment paper */
+.scroll {
+    width: 600px;
+    padding: 100px 50px 80px; 
+    max-height: 70vh;
+    overflow-y: auto;
+    background: linear-gradient(#f7e4b5, #f2d39c);
+    border-radius: 20px 20px 8px 8px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    border: 8px solid #d6a760;
+    position: relative;
+}
+
+/* Top cursive flourish */
+.scroll::before {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    color: #8b5a2b;
+    background: linear-gradient(to right, #f5e8c7, #f2d39c);
+    padding: 12px 40px;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 -2px 12px rgba(139,90,43,0.4);
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+}
+
+/* Bottom cursive flourish */
+.scroll::after {
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    color: #8b5a2b;
+    background: linear-gradient(to right, #f2d39c, #f5e8c7);
+    padding: 12px 40px;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 4px 12px rgba(139,90,43,0.4);
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+}
+
+/* title */
+h1{
+    font-family:'Great Vibes', cursive;
+    font-size:50px;
+    text-align:center;
+    margin-bottom:30px;
+    color: #835510;
+}
+
+/* columns */
+.columns{
+    display:flex;
+    justify-content:space-between;
+}
+
+.column{
+    width:45%;
+}
+
+/* subtitles */
+h2{
+    text-align:center;
+    margin-bottom:15px;
+    color: #c58122;
+}
+
+/* list text */
+p{
+    text-align:center;
+    margin:6px 0;
+    color: #6b5533;
+}
