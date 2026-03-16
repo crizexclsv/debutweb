@@ -220,6 +220,10 @@ body {
 }
 
 .image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -228,25 +232,49 @@ body {
     transform: scale(1.05);
 }
 
-.pagefour .image-frame.middle.gallery2 {
-    margin-right: -30px;
-    margin-top: 20px;
+.image-frame.middle {
+    margin-top: 5px;
     width: 180px;
     transform: rotate(0deg);
-    z-index: 1;
 }
 
-.pagefour .image-frame.lean.gallery3 {
-    margin-top: 20px;
-    width: 180px;
-    transform: rotate(30deg);
-}
-
-.page1-img, .page2-img, .page3-img, .gallery-img {
+.image-frame.middle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+.image-frame.middle img:hover {
+    transform: scale(1.05);
+}
+
+.image-frame.lean {
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 180px;
+    transform: rotate(30deg);
+    z-index: -1; 
+    position: relative;
+}
+
+.image-frame.lean img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-frame.lean img:hover {
+    transform: scale(1.05);
+}
+
+
+
 
 /* Page 3: Dress Code */
 .pagethree {
@@ -380,7 +408,7 @@ body {
 
 .gallery-container-pagefour {
     position: absolute;
-    right: 155px;
+    right: 105px;
     top: 60%;
     transform: translateY(-50%);
     display: flex;
