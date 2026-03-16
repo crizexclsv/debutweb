@@ -120,6 +120,13 @@ body {
 
 
 
+
+
+
+
+
+
+
 /* Page 2: Countdown */
 .pagetwo {
     height: 100vh;
@@ -276,6 +283,13 @@ body {
 
 
 
+
+
+
+
+
+
+
 /* Page 3: Dress Code */
 .pagethree {
     height: 100vh;
@@ -309,46 +323,186 @@ body {
     pointer-events: none;
 }
 
-.dress-container {
-    text-align: center;
-    max-width: 600px;
-    padding: 60px;
-    border-radius: 20px;
-    background: linear-gradient(180deg, #FF6B9D, #C44569, #F8B500);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    font-family: 'Segoe UI', sans-serif;
-    color: white;
-    animation: fadeInUp 2s forwards;
+
+.container{
+display:flex;
+width:100%;
+min-height:100vh;
 }
 
-.dress-container h1 {
-    font-size: 4rem;
-    font-family: 'Great Vibes', cursive;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+
+/* PANELS */
+
+.panel{
+flex:1;
+padding:40px;
+text-align:center;
+position:relative;
 }
 
-.dress-container p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+.panel:not(:last-child){
+border-right:2px solid #aab7c6;
 }
 
-.dress-container ul {
-    list-style: none;
-    font-size: 1.3rem;
+
+/* LEFT PANEL */
+
+.left{
+background:#e8e3da;
 }
 
-.dress-container li {
-    margin: 15px 0;
-    padding-left: 20px;
-    position: relative;
+.left h1{
+font-family:'Great Vibes';
+font-size:42px;
+color:#7b8ea8;
+margin-bottom:20px;
 }
 
-.dress-container li::before {
-    content: '✨';
-    position: absolute;
-    left: 0;
+.left h2{
+margin-top:25px;
+font-family:'Great Vibes';
+color:#7b8ea8;
 }
+
+
+/* CENTER PANEL */
+
+.middle{
+background:white;
+}
+
+.middle h1{
+font-family:'Great Vibes';
+font-size:42px;
+color:#7b8ea8;
+}
+
+.subtitle{
+margin-top:10px;
+margin-bottom:30px;
+font-style:italic;
+color:#555;
+}
+
+
+/* PHOTOS */
+
+.photos-container{
+position:relative;
+height:200px;
+margin-top:20px;
+}
+
+.photo{
+width:120px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.photo-left{
+position:absolute;
+left:40px;
+top:0;
+}
+
+.photo-right{
+position:absolute;
+right:40px;
+top:0;
+}
+
+
+/* COLOR PALETTE */
+
+.palette-container{
+margin-top:40px;
+}
+
+.palette-title{
+font-family:'Playfair Display';
+font-size:22px;
+color:#6e86a5;
+margin-bottom:20px;
+}
+
+.palette{
+display:grid;
+grid-template-columns:repeat(3,90px);
+gap:25px;
+justify-content:center;
+}
+
+.palette-item{
+text-align:center;
+font-size:12px;
+color:#444;
+}
+
+.color{
+width:90px;
+height:90px;
+border-radius:12px;
+margin-bottom:8px;
+box-shadow:0 5px 12px rgba(0,0,0,0.15);
+}
+
+
+/* COLOR SHADES */
+
+.navy{background:#2f4a6f;}
+.darksky{background:#6e8fb2;}
+.baby{background:#a9c7df;}
+.pastel{background:#c6deee;}
+.tropical{background:#8ec6df;}
+.light{background:#dceaf5;}
+
+
+/* RIGHT PANEL */
+
+.right{
+background:#e9edf2;
+position:relative;
+overflow:hidden;
+}
+
+.right::before{
+content:"";
+position:absolute;
+right:-120px;
+top:40px;
+width:420px;
+height:420px;
+background:url("flower.png") no-repeat center;
+background-size:contain;
+opacity:0.6;
+}
+
+.right h1{
+font-family:'Great Vibes';
+font-size:42px;
+color:#7b8ea8;
+}
+
+.right p{
+margin:20px auto;
+max-width:260px;
+line-height:1.6;
+}
+
+.right h2{
+margin-top:40px;
+font-family:'Great Vibes';
+font-size:36px;
+color:#7b8ea8;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -486,6 +640,19 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Page 5: Location */
 .pagefive {
      min-height: 100vh;
@@ -502,7 +669,6 @@ body {
     position: relative;
     z-index: -1;
 }
-
 
 
 .pagefive::before {
@@ -638,6 +804,14 @@ body {
     border-radius: 10px;
     border: 3px solid rgb(255, 251, 251);
 }
+
+
+
+
+
+
+
+
 
 
 
