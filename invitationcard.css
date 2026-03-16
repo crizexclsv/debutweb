@@ -28,7 +28,7 @@ body {
     align-items: stretch;
     scroll-snap-align: start;
     box-sizing: border-box; 
-    background-image: url('ki.jpg');
+    background-image: url('blueflower.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -42,7 +42,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('ki.jpg');
+    background-image: url('blueflower.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(10px);
@@ -56,8 +56,8 @@ body {
     margin-left: 30px;
     font-size: 6rem;
     font-family: 'Great Vibes', cursive;
-    color: lch(99.73% 0.35 17.55);
-    text-shadow: 10px 10px 10px hwb(0 57% 39%);
+    color: rgb(255, 254, 254);
+    text-shadow: 3px 9px 15px rgb(9, 9, 9);
     animation: fadeInUp 2s forwards;
 }
     
@@ -77,7 +77,7 @@ body {
     font-size: 6rem;
     font-family: 'Great Vibes', cursive;
     color: #ffffff;
-    text-shadow: 10px 10px 10px rgb(110, 105, 105);
+    text-shadow: 3px 9px 15px rgb(9, 9, 9);
     animation: fadeInUp 2s forwards;
 }
 
@@ -87,7 +87,7 @@ body {
     font-size: 6rem;
     font-family: 'Great Vibes', cursive;
     color: #a2bffe;
-    text-shadow: 10px 10px 10px lab(28.99% 2.54 0.91);
+    text-shadow: 2px 9px 15px rgb(9, 9, 9);
     animation: fadeInUp 2s forwards;
 }
 
@@ -135,7 +135,7 @@ body {
     align-items: center;
     position: relative;
     z-index: -1;
-    background-image: url('glo.avif');
+    background-image: url('blu.jpeg');
     background-size: cover;
     background-position: center;
     scroll-snap-align: start;
@@ -150,7 +150,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('glo.avif');
+    background-image: url('blu.jpeg');
     background-size: cover;
     background-position: center;
     filter: blur(10px);
@@ -299,7 +299,7 @@ body {
     align-items: center;
     position: relative;
     z-index: 1;
-    background-image: url('glo.avif');
+    background-image: url('blu.jpeg');
     background-size: cover;
     background-position: center;
     scroll-snap-align: start;
@@ -314,7 +314,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('glo.avif');
+    background-image: url('blu.jpeg');
     background-size: cover;
     background-position: center;
     filter: blur(10px);
@@ -348,40 +348,58 @@ border-right:2px solid #aab7c6;
 /* LEFT PANEL */
 
 .left{
-background:#e8e3da;
+background: url(blu.jpeg);
+background-position: center;
+background-repeat: no-repeat;
 }
 
 .left h1{
 font-family:'Great Vibes';
 font-size:42px;
-color:#7b8ea8;
 margin-bottom:20px;
+margin-top: 80px;
+color: #fbf7f7;
+text-shadow: #000000 1px 5px 12px;
 }
 
 .left h2{
-margin-top:25px;
+font-size: 2.5pc;
+margin-top: 100px;
 font-family:'Great Vibes';
-color:#7b8ea8;
+color:#feffff;
+text-shadow: #000000 1px 5px 12px;
 }
-
+.left p{
+    color: #000000;
+    margin-top: 15px;
+}
 
 /* CENTER PANEL */
 
 .middle{
-background:white;
+background: url(blu.jpeg);
+background-position: center;
+background-repeat: no-repeat;
 }
 
 .middle h1{
+margin-top: 80px ;
 font-family:'Great Vibes';
 font-size:42px;
-color:#7b8ea8;
+color: white;
+text-shadow: #000000 1px 5px 12px;
+}
+
+.middle p{
+    color: black;
+    margin-top: 10px;
 }
 
 .subtitle{
 margin-top:10px;
 margin-bottom:30px;
 font-style:italic;
-color:#555;
+color:#fff5f5;
 }
 
 
@@ -397,6 +415,12 @@ margin-top:20px;
 width:120px;
 border-radius:12px;
 box-shadow:0 6px 15px rgba(0,0,0,0.2);
+cursor:pointer;
+transition:transform 0.3s ease;
+}
+
+.photo:hover {
+transform:scale(1.05);
 }
 
 .photo-left{
@@ -411,6 +435,19 @@ right:40px;
 top:0;
 }
 
+.photo.fullscreen {
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+max-width:none;
+border-radius:0;
+z-index:999;
+object-fit:contain;
+background:rgba(0,0,0,0.9);
+}
+
 
 /* COLOR PALETTE */
 
@@ -419,10 +456,12 @@ margin-top:40px;
 }
 
 .palette-title{
-font-family:'Playfair Display';
+font-family:'Segeo', sans-serif;
 font-size:22px;
-color:#6e86a5;
+color:#ffffff;
+text-shadow: #000000 1px 5px 12px;
 margin-bottom:20px;
+margin-top: 10px;
 }
 
 .palette{
@@ -436,6 +475,10 @@ justify-content:center;
 text-align:center;
 font-size:12px;
 color:#444;
+}
+
+.palette p{
+    font-family: 'Segeo', sans-serif ;
 }
 
 .color{
@@ -460,7 +503,9 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
 /* RIGHT PANEL */
 
 .right{
-background:#e9edf2;
+background: url(blu.jpeg);
+background-position: center;
+background-repeat: no-repeat;
 position:relative;
 overflow:hidden;
 }
@@ -480,7 +525,9 @@ opacity:0.6;
 .right h1{
 font-family:'Great Vibes';
 font-size:42px;
-color:#7b8ea8;
+color:#ffffff;
+text-shadow: #000000 1px 5px 12px;
+margin-top: 85px;
 }
 
 .right p{
@@ -490,10 +537,11 @@ line-height:1.6;
 }
 
 .right h2{
-margin-top:40px;
+margin-top: 125px;
 font-family:'Great Vibes';
 font-size:36px;
-color:#7b8ea8;
+color:#ffffff;
+text-shadow: #000000 1px 5px 12px;
 }
 
 
@@ -1003,4 +1051,33 @@ color:#7b8ea8;
 
 .card:focus {
     outline: none;
+}
+
+/* Music Toggle Button */
+.music-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #BACFFE, #3B78FD, #94B5FE);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(59, 120, 253, 0.4);
+    font-family: 'Great Vibes', cursive;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+}
+
+.music-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(59, 120, 253, 0.6);
+}
+
+.music-toggle:active {
+    transform: scale(0.98);
 }

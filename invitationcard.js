@@ -76,10 +76,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }, {once: true});
     });
   });
+
+  // Fullscreen for .photo images (dress code page)
+  const photoImgs = document.querySelectorAll('.photo');
+  photoImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      const modal = document.createElement('div');
+      modal.className = 'fullscreen-modal';
+      const fullImg = document.createElement('img');
+      fullImg.src = img.src;
+      fullImg.className = 'fullscreen-img';
+      modal.appendChild(fullImg);
+      document.body.appendChild(modal);
+      modal.addEventListener('click', () => modal.remove());
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.remove();
+      }, {once: true});
+    });
+  });
 });
 
-const audio = document.getElementById("backgroundMusic");
-if (audio) {
-  audio.muted = false;
-  audio.play().catch(() => {});
-}
+// Autoplay music inside DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+  const audio = document.getElementById("backgroundMusic");
+  if (audio) {
+    audio.volume = 0.5;
+    audio.play().catch(e => console.error('Audio play failed:', e));
+  }
+});
