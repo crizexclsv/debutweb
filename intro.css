@@ -9,27 +9,39 @@ html {
 }
 
 body {
-    height: 100vh;
-    background-image: url(bgflo.jpg);
-    background-position: center;
+  height: 100vh;
+  background-image: url(blueflower.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -10;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: -10;
 }
 
 h1 {
     margin-bottom: 1rem;
     margin-top: 50px;
     text-align: center;
-    color: rgb(228, 23, 23);
+    color: rgb(87, 133, 232);
     font-family: 'Great Vibes', cursive;
     font-size: 75px;
-    text-shadow: 1px 5px 4px  #080707;
+    text-shadow: 5px 9px 7px  #c6bcbc;
     animation: fadeInUp 2s forwards;
 }
 
 h2 {
     font-size: 45px;
     font-family: 'Great Vibes', cursive;
-    color: rgb(39, 27, 27);
-    text-shadow: 1px 5px 4px  #857777f7;
+    color: rgb(35, 33, 33);
+    text-shadow: 1px 5px 4px  #fffffff7;
     animation: fadeInUp 2s forwards;
     text-align: center;
 }
@@ -52,7 +64,7 @@ h2 {
 .env-back {
   position: absolute;
   inset: 0;
-  background: #bd1212;
+  background: #107eb6;
   border-radius: 10px;
   box-shadow: 0 25px 50px rgb(8, 8, 8);
   z-index: 1;
@@ -61,7 +73,7 @@ h2 {
 .env-pocket {
   position: absolute;
   inset: 0;
-  background: hsla(0, 88%, 45%, 0.945);
+  background: #2085b7;
   background-position: center;
   border-radius: 20px;
   clip-path: polygon(0 5%, 50% 70%, 100% 5%, 100% 100%, 0 100%);
@@ -75,7 +87,7 @@ h2 {
   left: 5%;
   height: 230px;
   top: 10px;
-  background: #fff;
+  background: #fcfdfd;
   border-radius: 14px;
   padding: 28px 20px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
@@ -100,7 +112,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #f6070786;
+  background: #30a3dd;
   clip-path: polygon(0 0, 100% 0, 50% 65%);
   backface-visibility: hidden;
   z-index: 2;
@@ -137,7 +149,7 @@ h2 {
   font-family: 'Great Vibes', cursive;
   font-size: 50px;
   color: #000000;
-  text-shadow: 1px 7px 4px  #5a5151;
+  text-shadow: 5px 9px 7px  #c6bcbc;
   animation: fadeInUp 2s forwards;
 }
 

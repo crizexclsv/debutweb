@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-const debutDate = new Date("Mar 26, 2026 12:00:00").getTime();
+const debutDate = new Date("Mar 27, 2026 12:00:00").getTime();
 
 setInterval(() => {
 
@@ -77,3 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const audio = document.getElementById("backgroundMusic");
+if (audio) {
+  audio.muted = false;
+  audio.play().catch(() => {});
+}

@@ -27,7 +27,7 @@ body {
     justify-content: flex-start;
     align-items: stretch;
     scroll-snap-align: start;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     background-image: url('ki.jpg');
     background-size: cover;
     background-position: center;
@@ -599,11 +599,11 @@ color:#7b8ea8;
     transition: transform 0.3s ease;
 }
 
-.image-frame-gallery1 img:hover {
+.image-frame.gallery1 img:hover {
     transform: scale(1.05);
 }
 
-.image-frame lean gallery2 {
+.image-frame.lean.gallery2 {
     width: 200px;
     height: 250px;
     overflow: hidden;
@@ -611,7 +611,7 @@ color:#7b8ea8;
     box-shadow: 0 10px 90px rgba(0, 0, 0, 0.5);
 }
 
-.image-frame lean gallery2 img {
+.image-frame.lean.gallery2 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -619,11 +619,11 @@ color:#7b8ea8;
     transition: transform 0.3s ease;
 }
 
-.image-frame lean gallery2 img:hover {
+.image-frame.lean.gallery2 img:hover {
     transform: scale(1.05);
 }
 
-.image-frame lean gallery3 {
+.image-frame.lean.gallery3 {
     width: 200px;
     height: 250px;
     overflow: hidden;
@@ -631,12 +631,16 @@ color:#7b8ea8;
     box-shadow: 0 10px 90px rgba(0, 0, 0, 0.5);
 }
 
-.image-frame lean gallery3 img {
+.image-frame.lean.gallery3 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease;
+}
+
+.image-frame.lean.gallery3 img:hover {
+    transform: scale(1.05);
 }
 
 
@@ -768,20 +772,22 @@ color:#7b8ea8;
 }
 
 .details h3 {
-    font-size: 18px;
+    font-size: 24px;
     font-family: 'Segoe UI', sans-serif;
-    color: rgba(248, 247, 247, 0.897);
-    text-shadow: 1px 3px 4px  #141010f7;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 .details p {
-    color: rgb(255, 247, 247);
-    text-shadow: 1px 3px 4px  #141010f7;
-    font-size: 20px;
-    font-family: 'Segoe UI',  sans-serif;
-    margin: 3px 0;
+    color: #ffffff !important;
+    text-shadow: 1px 2px 6px rgba(0,0,0,0.9);
+    font-size: 22px;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 5px 0;
+    font-weight: 500;
 }
 
 .view-map {
@@ -790,7 +796,7 @@ color:#7b8ea8;
     font-size: 13px;
     font-family: 'Segoe UI',  sans-serif;
     text-decoration: none;
-    color: rgba(255, 249, 249, 0.798) !important;
+    color: white !important;
     text-shadow: 1px 3px 4px  #141010f7;
     font-weight: bold;
 }
@@ -820,13 +826,11 @@ color:#7b8ea8;
 
 /* Page 6: Cards */
 .pagesix {
-    content: '';
     min-height: 100vh;
     padding: 20px;
     z-index: -1;
-    position: absolute;
-    display: flex;
     position: relative;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -866,13 +870,13 @@ color:#7b8ea8;
     font-size: 12px;
     letter-spacing: 1px;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(pink, rgb(209, 90, 108), rgb(254, 168, 182));
+     background: linear-gradient(180deg,#8aa5e9,#2f23db, #73aed3);
     box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
 }
 
 .text-container3 h1,
 .text-container3 h2 {
-    margin: px 0;
+    margin: 0;
     color: #fff9f9;
     text-shadow: 1px 3px 4px  #141010f7;
 }
@@ -889,14 +893,13 @@ color:#7b8ea8;
     justify-content: center;
     align-items: center;
     text-decoration: none; 
-    color: white;
     cursor: pointer; 
     overflow: hidden; 
     position: relative; 
 }
 
 .card.red{
- width: 240px;
+  width: 240px;
   height: 140px;
   padding: 20px;
   opacity: 0.6;
@@ -904,8 +907,9 @@ color:#7b8ea8;
   transform: scale(0.9);
   transition: transform 0.3s ease, opacity 0.3s ease;
   font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
   box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
-  background: linear-gradient(180deg, #ee5050 ,#B90900, #f23333 );
+  background: linear-gradient(180deg,#ee7e7e,#a60707, #d57676);
 }
 
 .card.blue{
@@ -917,6 +921,7 @@ color:#7b8ea8;
   transform: scale(0.9);
   transition: transform 0.3s ease, opacity 0.3s ease;
   font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
   box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
   background: linear-gradient(180deg, #C1D5F0,#446496, #A8B5E0);
 }
@@ -930,6 +935,7 @@ color:#7b8ea8;
   transform: scale(0.9);
   transition: transform 0.3s ease, opacity 0.3s ease;
   font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
   box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
   background: linear-gradient(180deg,#85f361,#1b871b, #58e340);
 }
@@ -943,6 +949,7 @@ color:#7b8ea8;
   transform: scale(0.9);
   transition: transform 0.3s ease, opacity 0.3s ease;
   font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
   box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
   background: linear-gradient(180deg, #E2B0AF,#BB4644, #CA706E);
 }
@@ -956,12 +963,13 @@ color:#7b8ea8;
   transform: scale(0.9);
   transition: transform 0.3s ease, opacity 0.3s ease;
   font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
   background: linear-gradient(180deg, #BE80BC,#9C5099, #BC7CBA);
   box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
 }
 
 .card a {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -971,19 +979,26 @@ color:#7b8ea8;
   z-index: 5;
 }
 
-.card h3, .card p {
+.card h4, .card h3, .card p {
     margin: 0;
     padding: 0;
     text-align: center;
+    color: inherit;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
+.cards .card:hover h4,
 .cards .card:hover h3 {
-  letter-spacing: 4px;
+  letter-spacing: 1px;
+  color: #f9f9f4 !important;
+  text-shadow: 0 0 15px rgba(92, 87, 87, 0.8), 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .cards .card:hover p {
   opacity: 1;
   transform: translateY(0);
+  color: #fffefe !important;
+  text-shadow: 0 0 15px rgba(88, 84, 84, 0.8), 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .card:focus {

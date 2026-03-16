@@ -21,3 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+const audio = document.getElementById("backgroundMusic");
+if (audio) {
+  audio.muted = false;
+  audio.play().catch(() => {});
+}
