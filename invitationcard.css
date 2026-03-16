@@ -280,10 +280,12 @@ body {
 .pagethree {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
-    background-image: url('ki.jpg');
+    z-index: 1;
+    background-image: url('glo.avif');
     background-size: cover;
     background-position: center;
     scroll-snap-align: start;
@@ -298,11 +300,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('ki.jpg');
+    background-image: url('glo.avif');
     background-size: cover;
     background-position: center;
     filter: blur(10px);
-    z-index: -1;
+    -webkit-filter: blur(5px);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .dress-container {
@@ -346,6 +350,13 @@ body {
     left: 0;
 }
 
+
+
+
+
+
+
+
 /* Page 4: Pictures */
 .pagefour{
     height: 100vh;
@@ -363,18 +374,18 @@ body {
 }
 
 .pagefour::before {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url('glo.avif');
     background-size: cover;
     background-position: center;
-    scroll-snap-align: start;
-    padding: 20px;
-    box-sizing: border-box;
+    filter: blur(10px);
+    -webkit-filter: blur(5px);
+    z-index: -1;
 }
 
 .text-container-pagefour {
