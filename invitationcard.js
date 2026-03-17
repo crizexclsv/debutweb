@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-const debutDate = new Date("Mar 27, 2026 12:00:00").getTime();
+const debutDate = new Date("Mar 26, 2026 12:00:00").getTime();
 
 setInterval(() => {
 
