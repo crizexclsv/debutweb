@@ -348,8 +348,26 @@ border-right:2px solid #aab7c6;
 
 /* LEFT PANEL */
 
-.left{
-  background: url(blu.jpeg) no-repeat center center/cover;
+.left {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(2px);
+}
+
+.left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('blu.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  z-index: -1;
 }
 
 .left h1{
@@ -378,8 +396,26 @@ text-shadow: #000000 1px 5px 12px;
 
 /* CENTER PANEL */
 
-.middle{
-  background: url(blu.jpeg) no-repeat center center/cover;
+.middle {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(2px);
+}
+
+.middle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('blu.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  z-index: -1;
 }
 
 .middle h1{
@@ -510,22 +546,37 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
 
 /* RIGHT PANEL */
 
-.right{
-  background: url(blu.jpeg) no-repeat center center/cover;
-  position:relative;
-  overflow:hidden;
+.right {
+position: relative;
+z-index: 2;
+background: rgba(255,255,255,0.1);
 }
 
-.right::before{
-content:"";
-position:absolute;
-right:-120px;
-top:40px;
-width:420px;
-height:420px;
-background:url("flower.png") no-repeat center;
-background-size:contain;
-opacity:0.6;
+.right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('blu.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  z-index: -1;
+}
+
+.right-flower {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: 40px;
+  width: 420px;
+  height: 420px;
+  background: url("flower.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
 }
 
 .right h1{
@@ -576,9 +627,7 @@ text-shadow: #000000 1px 5px 12px;
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    background-image: url('glo.avif');
-    background-size: cover;
-    background-position: center;
+    background: rgba(255,255,255,0.1);
     scroll-snap-align: start;
     padding: 20px;
     box-sizing: border-box;
@@ -595,7 +644,7 @@ text-shadow: #000000 1px 5px 12px;
     background-size: cover;
     background-position: center;
     filter: blur(10px);
-    -webkit-filter: blur(5px);
+    -webkit-filter: blur(10px);
     z-index: -1;
 }
 
