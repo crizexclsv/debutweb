@@ -29,7 +29,7 @@ body {
     align-items: stretch;
     scroll-snap-align: start;
     box-sizing: border-box; 
-    background-image: url('blueflower.jpg');
+    background-image: url('flo.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -43,7 +43,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('blueflower.jpg');
+    background-image: url('flo.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(10px);
@@ -640,7 +640,7 @@ text-shadow: #000000 1px 5px 12px;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('glo.avif');
+    background-image: url('blu.jpeg');
     background-size: cover;
     background-position: center;
     filter: blur(10px);
@@ -773,7 +773,7 @@ text-shadow: #000000 1px 5px 12px;
     align-items: stretch;
     scroll-snap-align: start;
     box-sizing: border-box;
-    background-image: url('ki.jpg');
+    background-image: url('blu.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -788,7 +788,7 @@ text-shadow: #000000 1px 5px 12px;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('ki.jpg');
+    background-image: url('blu.jpeg');
     background-size: cover;
     background-position: center;
     filter: blur(15px);
@@ -942,7 +942,7 @@ text-shadow: #000000 1px 5px 12px;
     align-items: center;
     scroll-snap-align: start;
     box-sizing: border-box;
-    background-image: url('ki.jpg');
+    background-image: url('blu.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -958,7 +958,7 @@ text-shadow: #000000 1px 5px 12px;
     bottom: 0;
     z-index: -1;
     filter: blur(15px);
-    background-image: url('ki.jpg');
+    background-image: url('blu.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -975,16 +975,16 @@ text-shadow: #000000 1px 5px 12px;
     padding: 40px;
     font-size: 12px;
     letter-spacing: 1px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Special Elite Regular';
      background: linear-gradient(180deg,#8aa5e9,#2f23db, #73aed3);
     box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
 }
 
 .text-container3 h1,
 .text-container3 h2 {
-    margin: 0;
-    color: #fff9f9;
-    text-shadow: 1px 3px 4px  #141010f7;
+    margin-top: 15px;
+    color: #ffffff;
+    text-shadow: 3px 1px 5px  #000000f7;
 }
 
 .cards {
