@@ -474,7 +474,7 @@ margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
+  gap: 40px;
   max-width: 400px;
   margin: 0 auto;
 }
@@ -504,7 +504,7 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
 /* COLOR SHADES */
 
 .navy{background:#FFFFFF;}
-.darksky{background:#5A7D9C;}
+.cream{background:#FDFBD4;}
 .baby{background:#A0C4FF;}
 .pastel{background:#4A90C6;}
 .tropical{background:#B3D9F2;}
