@@ -349,9 +349,7 @@ border-right:2px solid #aab7c6;
 /* LEFT PANEL */
 
 .left{
-background: url(blu.jpeg);
-background-position: center;
-background-repeat: no-repeat;
+  background: url(blu.jpeg) no-repeat center center/cover;
 }
 
 .left h1{
@@ -381,9 +379,7 @@ text-shadow: #000000 1px 5px 12px;
 /* CENTER PANEL */
 
 .middle{
-background: url(blu.jpeg);
-background-position: center;
-background-repeat: no-repeat;
+  background: url(blu.jpeg) no-repeat center center/cover;
 }
 
 .middle h1{
@@ -504,7 +500,7 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
 /* COLOR SHADES */
 
 .navy{background:#FFFFFF;}
-.cream{background:#FDFBD4;}
+.beige{background:#FDFBD4;}
 .baby{background:#A0C4FF;}
 .pastel{background:#4A90C6;}
 .tropical{background:#B3D9F2;}
@@ -515,11 +511,9 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
 /* RIGHT PANEL */
 
 .right{
-background: url(blu.jpeg);
-background-position: center;
-background-repeat: no-repeat;
-position:relative;
-overflow:hidden;
+  background: url(blu.jpeg) no-repeat center center/cover;
+  position:relative;
+  overflow:hidden;
 }
 
 .right::before{
