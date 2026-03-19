@@ -53,52 +53,54 @@ body {
 
 #intro {
     text-align: left;
-    margin-top: 40px;
-    margin-left: 30px;
-    font-size: 6rem;
+    margin-top: clamp(20px, 8vh, 40px);
+    margin-left: clamp(5vw, 30px, 40px);
+    margin-right: clamp(5vw, 20px, 40px);
+    font-size: clamp(2.5rem, 10vw, 6rem);
     font-family: 'Great Vibes', cursive;
     color: rgb(255, 254, 254);
     text-shadow: 3px 9px 15px rgb(9, 9, 9);
     animation: fadeInUp 2s forwards;
 }
     
- #invite {
-    margin-left: 5.5%;
-    font-size: 2.0rem;
+#invite {
+    margin-top: clamp(10px, 4vh, 15px);
+    margin-left: clamp(5vw, 5.5%, 8vw);
+    font-size: clamp(1.5rem, 6vw, 2.0rem);
     font-family: 'Great Vibes', cursive;
     color: rgb(87, 60, 60);
-    text-shadow: 10px 10px 10px hwb(0 52% 45%);
+    text-shadow: clamp(4px, 1vw, 10px) clamp(4px, 1vw, 10px) clamp(4px, 1vw, 10px) hwb(0 52% 45%);
     animation: fadeInUp 2s forwards;
 }
 
 #greetings {
     text-align: left;
-    margin-top: 20px;
-    margin-left: 6.5%;
-    font-size: 6rem;
+    margin-top: clamp(15px, 6vh, 20px);
+    margin-left: clamp(6vw, 6.5%, 10vw);
+    font-size: clamp(2.5rem, 10vw, 6rem);
     font-family: 'Great Vibes', cursive;
     color: #ffffff;
-    text-shadow: 3px 9px 15px rgb(9, 9, 9);
+    text-shadow: clamp(2px, 0.8vw, 3px) clamp(4px, 1.5vw, 9px) clamp(6px, 2vw, 15px) rgb(9, 9, 9);
     animation: fadeInUp 2s forwards;
 }
 
 #bday {
     text-align: left;
-    margin-left: 10.5%;
-    font-size: 6rem;
+    margin-left: clamp(8vw, 10.5%, 12vw);
+    font-size: clamp(2.5rem, 10vw, 6rem);
     font-family: 'Great Vibes', cursive;
     color: #a2bffe;
-    text-shadow: 2px 9px 15px rgb(9, 9, 9);
+    text-shadow: clamp(1px, 0.5vw, 2px) clamp(3px, 1vw, 9px) clamp(5px, 1.5vw, 15px) rgb(9, 9, 9);
     animation: fadeInUp 2s forwards;
 }
 
 .frame {
-  margin-bottom: 30px  auto;
-  top: 15%;
-  right: 9.5%;
-  width: 100%;
-  max-width: 300px;
-  height: 380px;
+  margin-bottom: clamp(20px, 5vh, 30px) auto;
+  top: clamp(10%, 15%, 20%);
+  right: clamp(5vw, 9.5%, 15vw);
+  width: clamp(250px, 30vw, 100%);
+  max-width: clamp(250px, 30vw, 300px);
+  height: clamp(300px, 40vh, 380px);
   background-image: url('Screenshot_2026-02-13_014606-removebg-preview.png');
   position: absolute;
   background-size: cover;
@@ -162,9 +164,9 @@ body {
 .text-container {
     text-align: center;
     margin: 0 auto;
-    margin-left: 40px;
-    max-width: 600px;
-    padding: 40px;
+    margin-left: clamp(20px, 5vw, 40px);
+    max-width: min(95vw, 600px);
+    padding: clamp(25px, 8vh, 40px);
     border-radius: 20px;
     background: linear-gradient(180deg, #BACFFE,#3B78FD, #94B5FE);
     box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
@@ -494,7 +496,7 @@ margin-top:40px;
 }
 
 .palette-title{
-font-family: 'Segeo', cursive;
+font-family: 'Segoe UI', cursive;
 font-size:22px;
 color:#ffffff;
 text-shadow: #000000 1px 5px 12px;
@@ -520,6 +522,7 @@ color:#444;
 .palette p{
     color: #1b1a1a;
     margin-top: 15px;
+    font-size: 12px;
     font-family: 'Special Elite Regular', cursive;
     text-shadow: 1px 3px 4px rgba(255, 245, 245, 0.8);
 }
@@ -672,6 +675,7 @@ text-shadow: #000000 1px 5px 12px;
 }
 
 .text-container-pagefour p {
+    font-family: 'Special Elite Regular', cursive;
     font-size: 1.5rem;
     color: #ffffff;
     text-shadow: 1px 3px 4px  #141010f7;
@@ -826,9 +830,9 @@ text-shadow: #000000 1px 5px 12px;
 
 
 .card {
-    width: 900px;
-    height: 400px;
-    padding: 40px 30px;
+    width: clamp(320px, 85vw, 900px);
+    height: clamp(280px, 45vh, 400px);
+    padding: clamp(20px, 6vw, 40px) clamp(15px, 4vw, 30px);
     border-radius: 20px;
     background: linear-gradient(180deg, #BACFFE,#3B78FD, #94B5FE);
     box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
@@ -882,7 +886,7 @@ text-shadow: #000000 1px 5px 12px;
     font-family: 'Segoe UI', sans-serif;
     color: #ffffff !important;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     letter-spacing: 2px;
     font-weight: bold;
 }
@@ -892,7 +896,8 @@ text-shadow: #000000 1px 5px 12px;
     text-shadow: 1px 2px 6px rgba(0,0,0,0.9);
     font-size: 22px;
     font-family: 'Segoe UI', sans-serif;
-    margin: 5px 0;
+    margin: 5px;
+    margin-top: 15px;
     font-weight: 500;
 }
 
@@ -975,7 +980,7 @@ text-shadow: #000000 1px 5px 12px;
     padding: 40px;
     font-size: 12px;
     letter-spacing: 1px;
-    font-family: 'Special Elite Regular';
+    font-family: 'Segoe UI', sans-serif;
      background: linear-gradient(180deg,#8aa5e9,#2f23db, #73aed3);
     box-shadow: 0 4px 8px rgba(38, 34, 34, 15.0);
 }
@@ -1005,9 +1010,9 @@ text-shadow: #000000 1px 5px 12px;
 }
 
 .card.red{
-  width: 240px;
-  height: 140px;
-  padding: 20px;
+  width: clamp(180px, 22vw, 240px);
+  height: clamp(110px, 18vh, 140px);
+  padding: clamp(15px, 3vw, 20px);
   opacity: 0.6;
   border-radius: 18px;
   transform: scale(0.9);
@@ -1019,9 +1024,9 @@ text-shadow: #000000 1px 5px 12px;
 }
 
 .card.blue{
-  width: 240px;
-  height: 140px;
-  padding: 20px;
+  width: clamp(180px, 22vw, 240px);
+  height: clamp(110px, 18vh, 140px);
+  padding: clamp(15px, 3vw, 20px);
   opacity: 0.6;
   border-radius: 18px;
   transform: scale(0.9);
@@ -1033,9 +1038,9 @@ text-shadow: #000000 1px 5px 12px;
 }
 
 .card.green{
-  width: 240px;
-  height: 140px;
-  padding: 20px;
+  width: clamp(180px, 22vw, 240px);
+  height: clamp(110px, 18vh, 140px);
+  padding: clamp(15px, 3vw, 20px);
   opacity: 0.6;
   border-radius: 18px;
   transform: scale(0.9);
@@ -1047,9 +1052,9 @@ text-shadow: #000000 1px 5px 12px;
 }
 
 .card.pink{
-  width: 240px;
-  height: 140px;
-  padding: 20px;
+  width: clamp(180px, 22vw, 240px);
+  height: clamp(110px, 18vh, 140px);
+  padding: clamp(15px, 3vw, 20px);
   opacity: 0.6;
   border-radius: 18px;
   transform: scale(0.9);
@@ -1061,9 +1066,9 @@ text-shadow: #000000 1px 5px 12px;
 }
 
 .card.violet{
-  width: 240px;
-  height: 140px;
-  padding: 20px;
+  width: clamp(180px, 22vw, 240px);
+  height: clamp(110px, 18vh, 140px);
+  padding: clamp(15px, 3vw, 20px);
   opacity: 0.6;
   border-radius: 18px;
   transform: scale(0.9);

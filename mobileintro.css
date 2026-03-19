@@ -1,0 +1,30 @@
+@media (max-width: 480px) {
+  body { height: 100vh; padding: 0 10px; }
+  h1 { font-size: 40px; text-shadow: 3px 5px 4px #c6bcbc; }
+  h2 { font-size: 26px; }
+  .hint { font-size: 28px; }
+  .scene { padding-top: 20px; }
+  .envelope { width: 240px; height: 160px; perspective: 600px; }
+  .letter { height: 170px; padding: 18px 12px; }
+  .env-front { background-size: 320px; }
+  .open .letter { transform: translateY(-130px); }
+  .seal { width: 48px; height: 48px; top: 75px; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 { font-size: 55px; }
+  h2 { font-size: 35px; }
+  .hint { font-size: 40px; }
+  .scene { padding-top: 40px; }
+  .envelope { width: 300px; height: 200px; }
+  .letter { height: 200px; }
+  .open .letter { transform: translateY(-180px); }
+  .seal { width: 60px; height: 60px; top: 95px; }
+  .env-front { background-size: 380px; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .envelope { width: 340px; height: 225px; }
+  .letter { height: 215px; }
+  .open .letter { transform: translateY(-200px); }
+}

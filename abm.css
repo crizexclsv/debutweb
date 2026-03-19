@@ -38,25 +38,27 @@ body::before {
 h2 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+    font-size: clamp(20px, 5vw, 25px);
     color: #fffcfcd4;
     text-shadow: 4px 4px 15px #000000;
-    margin-top: -10px;
+    margin-top: clamp(-20px, -2vh, -10px);
     animation: fadeIn 3.5s ease-out forwards;
 }
 
 .container .namecontainer {
     background:linear-gradient( rgb(109, 210, 241),rgb(110, 136, 231));
-    padding: 35px;
+    padding: clamp(20px, 5vw, 35px);
     border-radius: 15px;
     text-align: center;
-    width: 350px;
+    width: min(90vw, 350px);
+    max-width: 400px;
+    margin: 0 auto;
     box-shadow: 6px 6px 18px rgba(0,0,0,0.25), -6px -6px 18px rgba(69, 60, 60, 0.6);
-}    
+}  
 
 .namecontainer h2 {
-    margin-bottom: 15px;
-    font-size: 22px;
+    margin-bottom: clamp(10px, 3vw, 15px);
+    font-size: clamp(18px, 4.5vw, 22px);
     font-weight: bold;
 }
 
@@ -68,8 +70,8 @@ h2 {
 
 .namecontainer .input-box input {
   width: 100%;
-  padding: 12px;
-  font-size: 16px;
+  padding: clamp(12px, 4vw, 16px);
+  font-size: clamp(14px, 4vw, 16px);
   border-radius: 10px;
   border: none;
   outline: none;
@@ -80,9 +82,9 @@ h2 {
 
 .input-box label {
     position: absolute;
-    left: 12px;
-    bottom: 12px;
-    font-size: 16px;
+    left: clamp(10px, 3vw, 12px);
+    bottom: clamp(10px, 3vw, 12px);
+    font-size: clamp(14px, 3.5vw, 16px);
     color: #6a6666;
     pointer-events: none;
     transition: all 0.3s ease;
@@ -96,12 +98,13 @@ h2 {
 }
 
 .namecontainer button {
- width: 30%;
- padding: 12px;
+ width: clamp(120px, 35%, 160px);
+ padding: clamp(12px, 4vw, 16px);
  border: none;
  border-radius: 10px;
  background: #62b5c8;
  color: #ede7e7;
+ font-size: clamp(14px, 3.5vw, 16px);
  font-weight: bold;
  cursor: pointer;
  text-shadow: #363535 2px 2px 5px;
@@ -117,7 +120,7 @@ h2 {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(clamp(20px, 4vh, 30px));
     }
     to {
         opacity: 1;
@@ -133,3 +136,4 @@ h2 {
         opacity: 1;
     }
 }
+

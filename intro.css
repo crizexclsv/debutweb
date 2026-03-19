@@ -32,13 +32,13 @@ h1 {
     text-align: center;
     color: rgb(87, 133, 232);
     font-family: 'Great Vibes', cursive;
-    font-size: 75px;
+    font-size: clamp(45px, 8vw, 75px);
     text-shadow: 5px 9px 7px  #c6bcbc;
     animation: fadeInUp 2s forwards;
 }
 
 h2 {
-    font-size: 45px;
+    font-size: clamp(28px, 6vw, 45px);
     font-family: 'Great Vibes', cursive;
     color: rgb(35, 33, 33);
     text-shadow: 1px 5px 4px  #fffffff7;
@@ -48,7 +48,7 @@ h2 {
 
 .scene {
   text-align: center;
-  padding-top: 50px;
+  padding-top: clamp(20px, 5vh, 50px);
 }
 
 .envelope {
@@ -145,9 +145,9 @@ h2 {
 }
 
 .hint {
-  margin-top: 50px;
+  margin-top: 30px;
   font-family: 'Great Vibes', cursive;
-  font-size: 50px;
+  font-size: clamp(32px, 7vw, 50px);
   color: #000000;
   text-shadow: 5px 9px 7px  #c6bcbc;
   animation: fadeInUp 2s forwards;
@@ -188,9 +188,4 @@ h2 {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-@media (max-width: 480px) {
-  .envelope { width: 280px; height: 190px; }
-  .open .letter { transform: translateY(-160px); }
 }

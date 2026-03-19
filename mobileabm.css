@@ -1,0 +1,24 @@
+/* Responsive media queries */
+@media (max-width: 480px) {
+  .namecontainer {
+    margin-top: -40px;
+  }
+  body::before {
+    filter: blur(8px);
+  }
+  .namecontainer button:hover {
+    transform: translateY(5px);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container .namecontainer {
+    width: min(85vw, 320px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container .namecontainer {
+    padding: 30px;
+  }
+}
