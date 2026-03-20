@@ -758,40 +758,250 @@
 
 
 
+/* Mobile View: Page 5 */
+@media (max-width: 480px) {
 
-/* ===== PAGE 5 ===== */
-.pagefive .content {
-    flex-direction: column !important;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Resize QR + preview */
-.pagefive .qr-section img,
-.pagefive .preview img {
-    max-width: 120px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    object-fit: cover;
-}
-
-/* Adjust card */
-.pagefive .card {
-    height: auto;
+  .pagefive {
     padding: 15px;
-    width: 95%;
-    margin: 0 auto;
-}
+    min-height: 100vh;
+    background-position: top center;
+  }
 
-/* Center text */
-.pagefive .details {
-    padding: 0;
+.text-container2 {
+    padding-top: 1vh;
+    width: 90%;
+    height: auto;
     text-align: center;
+  }
+
+  .card {
+    width: 95%;
+    height: 98%;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .title-badge {
+    top: 15px;
+    padding: 6px 16px;
+  }
+
+  .title-badge h1 {
+    font-size: 14px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+    width: 100%;
+  }
+
+  .qr-section {
+    margin-left: 50px;
+  }
+
+  .details {
+    padding: 0 10px;
+  }
+
+  .details h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .details p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .view-map {
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  .preview {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-right: 40px;
+  }
+
+  .fullscreen-img {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
 }
 
+/* Tablet View (iPad/Android Tablets): Page 5 */
+@media (min-width: 481px) and (max-width: 1024px) {
 
+  .pagefive {
+    padding: 25px;
+    min-height: 100vh;
+    background-position: top center;
+  }
 
+  .text-container2 {
+    padding-top: 12vh;
+    width: 92%;
+    height: 55%;
+    text-align: center;
+  }
+
+  .card {
+    width: 90%;
+    height: 95% !important;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  }
+
+  .title-badge {
+    top: 15px;
+    padding: 12px 25px;
+    font-size: 20px;
+  }
+
+  .title-badge h1 {
+    font-size: 24px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .qr-section img,
+  .preview img {
+    width: 200px;
+    height: 200px;
+    margin: 20px 0;
+  }
+
+  .details {
+    padding: 0 15px;
+  }
+
+  .details h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .details p {
+    font-size: 22px;
+    margin-top: 12px;
+  }
+
+  .view-map {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .preview{
+    width: 120px;
+    height: 120px !important;
+  }
+
+  .fullscreen-img {
+    max-width: 92vw;
+    max-height: 92vh;
+  }
+
+}
+
+/* Medium Phones / Landscape (iOS/Android Phones): Page 5 */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .pagefive {
+    padding: 20px;
+    min-height: 100vh;
+    background-position: top center;
+  }
+
+  .text-container2 {
+    padding-top: 14vh;
+    width: 91%;
+    text-align: center;
+  }
+
+  .card {
+    width: 92%;
+    height: 96% !important;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 16px rgba(0,0,0,0.32);
+  }
+
+  .title-badge {
+    top: 12px;
+    padding: 10px 22px;
+    font-size: 18px;
+  }
+
+  .title-badge h1 {
+    font-size: 22px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+  }
+
+  .qr-section img,
+  .preview img {
+    width: 175px;
+    height: 175px;
+    margin: 18px 0;
+  }
+
+  .details {
+    padding: 0 12px;
+  }
+
+  .details h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .details p {
+    font-size: 20px;
+    margin-top: 11px;
+  }
+
+  .view-map {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .fullscreen-img {
+    max-width: 91vw;
+    max-height: 91vh;
+  }
+
+}
+
+/* iOS Retina / Android Phones Fine-tune: Page 5 */
+@media (max-width: 480px) and (-webkit-min-device-pixel-ratio: 1.5) {
+
+  .card {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  }
+
+  .qr-section img,
+  .preview img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+}
 
 /* ===== PAGE 6 ===== */
 @media (max-width: 480px) {
@@ -849,6 +1059,22 @@
     height: auto !important;
   }
 
+
+
+
+
+
+  .text-container3 { 
+    size: 50px;
+  }
+
+  .text-container3 h1 {
+font-size: 17px;
+  }
+
+  .text-container3 h2 {
+font-size: 15px !important;
+  }
   .cards {
     gap: 10px !important;
   }
@@ -887,5 +1113,4 @@
     padding: 10px 15px;
     font-size: 14px;
 }
-
 }

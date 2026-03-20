@@ -59,6 +59,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Fullscreen for QR code image
+  const qrImg = document.querySelector('.qr-section img');
+  if (qrImg) {
+    qrImg.addEventListener('click', () => {
+      const modal = document.createElement('div');
+      modal.className = 'fullscreen-modal';
+      const fullImg = document.createElement('img');
+      fullImg.src = qrImg.src;
+      fullImg.className = 'fullscreen-img';
+      modal.appendChild(fullImg);
+      document.body.appendChild(modal);
+      modal.addEventListener('click', () => modal.remove());
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.remove();
+      }, {once: true});
+    });
+  }
+
   // Fullscreen for image-frame images
   const frameImgs = document.querySelectorAll('.image-frame img');
   frameImgs.forEach(img => {
