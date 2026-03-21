@@ -16,11 +16,12 @@ body {
     padding: 0;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Page 1: Intro */
 .pageone {
+    height: auto;
     min-height: 100vh;
     padding: 20px;
     display: flex;
@@ -28,7 +29,8 @@ body {
     justify-content: flex-start;
     align-items: stretch;
     scroll-snap-align: start;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    overflow: visible;
     background-image: url('flo.jpg');
     background-size: cover;
     background-position: center;
@@ -95,16 +97,19 @@ body {
 }
 
 .frame {
-  margin-bottom: clamp(20px, 5vh, 30px) auto;
-  top: clamp(10%, 15%, 20%);
-  right: clamp(5vw, 9.5%, 15vw);
-  width: clamp(250px, 30vw, 100%);
-  max-width: clamp(250px, 30vw, 300px);
-  height: clamp(300px, 40vh, 380px);
-  background-image: url('Screenshot_2026-02-13_014606-removebg-preview.png');
-  position: absolute;
-  background-size: cover;
+  margin-bottom: clamp(20px, 5vh, 30px);
+  top: clamp(3%, 15%, 5%);
+  left: 55%;
+  width: clamp(380px, 45vw, 1000px);
+  max-width: clamp(450px, 50vw, 1000px);
+  height: clamp(480px, 60vh, 1100px);
+  
+  background-image: url('fr.png');
+  background-size: 100% auto; 
+  background-position: center;
   background-repeat: no-repeat;
+  
+  position: absolute;
   animation: fadeInUp 2s forwards;
 }
 
