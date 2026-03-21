@@ -105,7 +105,7 @@ body {
   height: clamp(480px, 60vh, 1100px);
   
   background-image: url('fr.png');
-  background-size: 100% auto; 
+  background-size: 100% auto;  
   background-position: center;
   background-repeat: no-repeat;
   
@@ -701,7 +701,7 @@ text-shadow: #000000 1px 5px 12px;
 .pagefour .image-frame.gallery1 {
     margin-bottom: -30px;
     margin-right: 30px;
-    width: 50pc;
+    width: 50pc !important;
     height: 300px;
     overflow: hidden;
     border-radius: 15px;
