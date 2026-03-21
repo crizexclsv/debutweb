@@ -172,7 +172,7 @@
     text-align: center;
     margin: 0 auto;
     width: clamp(280px, 90vw, 500px);
-    height: clamp(20px, 90vw, 165px);
+    height: clamp(20px, 90vw, 175px);
     padding: clamp(15px, 5vh, 30px);
     border-radius: 20px;
     background: linear-gradient(180deg, #BACFFE,#3B78FD, #94B5FE);
@@ -218,7 +218,7 @@
     position: relative !important;
     top: clamp(10px, 25vh, 25px) !important;
     right: auto !important;
-    left: 80% !important;
+    left: 50% !important;
     transform: translateX(-50%) !important;
     display: flex !important;
     flex-direction: row !important;
@@ -260,7 +260,7 @@
 
 .image-frame.lean {
     transform: 210deg;
-    margin-right: clamp(5.5px, 23vh, -6px);
+    margin-right: clamp(-45px, 23vh, -50px);
 }
 
 
