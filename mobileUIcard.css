@@ -212,27 +212,32 @@
     animation: fadeInUp 2s forwards;
 }
 
-.image-container-right {
-    position: relative;
-    top: clamp(10px, 25vh, 25px);
-    right: auto;
-    transform: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: clamp(5px, 2vw, 15px);
-    margin-top: 20px;
-    animation: fadeInUp 2s forwards;
+.pagetwo .image-container-right {
+    width: clamp(380px, 95vw, 500px) !important;
+    height: clamp(160px, 38vh, 230px) !important;
+    position: relative !important;
+    top: clamp(10px, 25vh, 25px) !important;
+    right: auto !important;
+    left: 80% !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: clamp(8px, 3vw, 20px) !important;
+    margin-top: 20px !important;
+    animation: fadeInUp 2s forwards !important;
 }
 
-.image-frame {
-    width: clamp(80px, 20vw, 120px);
-    height: clamp(110px, 25vh, 160px);
-    overflow: hidden;
-    border-radius: 15px;
-    margin-left: clamp(10px, 23vh, 11px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+.pagetwo .image-frame {
+    width: clamp(110px, 28vw, 160px) !important;
+    height: clamp(150px, 35vh, 210px) !important;
+    overflow: hidden !important;
+    border-radius: 15px !important;
+    margin-left: 0 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
+    flex-shrink: 0 !important;
 }
 
 .image-frame img {
@@ -248,14 +253,19 @@
     transform: scale(1.05);
 }
 
-.image-frame.middle {
-    transform: none;
+.pagetwo .image-frame.middle {
+    transform: none !important;
+    flex-shrink: 0 !important;
 }
 
 .image-frame.lean {
     transform: 210deg;
-    margin-right: clamp(5.5px, 23vh, 6px);
+    margin-right: clamp(5.5px, 23vh, -6px);
 }
+
+
+
+
 
 /* ===== PAGE 3 ===== */
 .pagethree {
@@ -1030,13 +1040,11 @@
   }
 
   /* Smaller images/gaps */
-  .image-frame,
+.image-frame,
   .image-frame.gallery1,
   .image-frame.gallery2,
   .image-frame.gallery3 {
-    width: 70px !important;
-    height: 100px !important;
-    gap: 5px;
+    flex-shrink: 0 !important;
   }
 
   .gallery-container-pagefour {
@@ -1045,8 +1053,8 @@
 
 .pagetwo .image-container-right,
   .pagefour .gallery-container-pagefour {
-    flex-wrap: wrap;
-    gap: 5px;
+    flex-wrap: nowrap !important;
+    gap: clamp(5px, 2vw, 15px) !important;
   }
 
   .pagefive .content {
