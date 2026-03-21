@@ -1,28 +1,100 @@
 body{
     margin:0;
     font-family: 'Libre Baskerville', serif;
+    overflow-x: hidden;
+}
+
+.page {
+    opacity: 1;
 }
 
 .page-front {
-    height: 100vh;
-    background-image: url('tr.jpg');
+    height: 150vh;
+    background-image: url('ty.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-    image-rendering: high-quality;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.front-text {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    z-index: 10;
+    background: rgba(0,0,0,0.3);
+    padding: 40px 60px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(245, 245, 245, 0);
+}
+
+.front-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+    color: #d6a760;
+}
+
+.front-subtitle {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 300;
+    color: #d6a760;
+}
+
+.page-front::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30vh;
+    background-image: linear-gradient(transparent, rgb(255, 255, 255));
+    background-blend-mode: screen;  
 }
 
 .page-back {
     height: 100vh;
-    background: linear-gradient(45deg, rgb(116, 164, 255) 0%, rgb(73, 73, 192) 33%, rgb(98, 81, 175) 66%, rgb(143, 186, 243) 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    position: relative;
+    background-image: url(''), linear-gradient(45deg, rgb(179, 197, 230) 0%, rgb(88, 88, 199) 33%, rgb(79, 57, 175) 66%, rgb(143, 186, 243) 100%);
+    background-size: cover, 400% 400%;
+    background-position: center, center;
+    background-blend-mode: overlay;
+    animation: gradientShift 5s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeInUp 1.8s 0.5s ease-out;
+}
+
+.page-back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30vh;
+    background: linear-gradient(rgba(255,255,255,0.8), transparent);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes gradientShift {
@@ -109,6 +181,13 @@ h1{
 
 /* subtitles */
 h2{
+    text-align:center;
+    margin-bottom:15px;
+    color: #c58122;
+}
+
+/* subtitles */
+h2, h3 {
     text-align:center;
     margin-bottom:15px;
     color: #c58122;

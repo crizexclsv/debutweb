@@ -1,33 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-
 body{
     margin:0;
     font-family: 'Libre Baskerville', serif;
-    background-image: url('ki.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    overflow-x: hidden;
 }
 
-body::before {
+.page {
+    opacity: 1;
+}
+
+.page-front {
+    height: 190vh;
+    background-image: url('sah.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    image-rendering: -webkit-optimize-contrast;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.front-text {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    z-index: 10;
+    background: rgba(0,0,0,0.3);
+    padding: 40px 60px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(245, 245, 245, 0);
+}
+
+.front-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+    color: #d6a760;
+}
+
+.front-subtitle {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 300;
+    color: #d6a760;
+}
+
+.page-front::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30vh;
+    background-image: linear-gradient(transparent, rgb(255, 255, 255));
+    background-blend-mode: screen;  
+}
+
+.page-back {
+    height: 100vh;
+    position: relative;
+    background-image: url(''), linear-gradient(45deg, rgb(179, 197, 230) 0%, rgb(88, 88, 199) 33%, rgb(79, 57, 175) 66%, rgb(143, 186, 243) 100%);
+    background-size: cover, 400% 400%;
+    background-position: center, center;
+    background-blend-mode: overlay;
+    animation: gradientShift 5s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 1.8s 0.5s ease-out;
+}
+
+.page-back::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background-image: url('ki.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(3  px);
+    height: 30vh;
+    background: linear-gradient(rgba(255,255,255,0.8), transparent);
 }
 
-/* floral background */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Parchment now no bg image */
 .background{
-    background-image:url("ki.jpg");
-    background-size:cover;
-    background-position:center;
-    min-height:100vh;
+    min-height: 80vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -37,7 +115,7 @@ body::before {
 .scroll {
     width: 600px;
     padding: 100px 50px 80px; 
-    max-height: 70vh;
+    max-height: 80vh;
     overflow-y: auto;
     background: linear-gradient(#f7e4b5, #f2d39c);
     border-radius: 20px 20px 8px 8px;
@@ -84,8 +162,8 @@ body::before {
 
 /* title */
 h1{
-    font-family: 'Great Vibes', cursive;
-    font-size:70px;
+    font-family:'Great Vibes', cursive;
+    font-size:50px;
     text-align:center;
     margin-bottom:30px;
     color: #835510;
@@ -106,14 +184,42 @@ h2{
     text-align:center;
     margin-bottom:15px;
     color: #c58122;
-    font-family: 'Special Elite Regular';
 }
 
 /* list text */
 p{
     text-align:center;
     margin:6px 0;
-    font-size: 25px;
     color: #6b5533;
-    font-family: 'Great Vibes', cursive;
+}
+
+@media screen {
+    .page-back {
+        min-height: 100vh;
+    }
+}
+
+@media print {
+    .page-front, .page-back {
+        height: 297mm !important;
+        width: 210mm !important;
+        margin: 0;
+        padding: 0;
+        break-after: page;
+    }
+    .page-front {
+        background-size: contain !important;
+        image-rendering: -webkit-optimize-contrast;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    .scroll {
+        max-height: none !important;
+        overflow: visible !important;
+        width: 80%;
+        max-width: 500px;
+    }
 }
