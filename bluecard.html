@@ -26,29 +26,28 @@
 
                     <div class="column">
                         <h2>Guests Name</h2>
-                        <P>Tita Kyle Gratil</P>
-                        <P>Tita Gem Dalanon</P>
-                        <P>Tita Margie Reonico</P>
-                        <P>Tita Anna Mangila</P>
-                        <P>Tita Jm Lapira</P>
-                        <P>Tita Rochelle Lapira</P>
-                        <P>Tita Weng Mangila</P>
-                        <P>Tita May Banaag</P>
+                        <p>Tita Kyle Gratil</p>
+                        <p>Tita Gem Dalanon</p>
+                        <p>Tita Margie Reonico</p>
+                        <p>Tita Anna Mangila</p>
+                        <p>Tita Jm Lapira</p>
+                        <p>Tita Rochelle Lapira</p>
+                        <p>Tita Weng Mangila</p>
+                        <p>Tita May Banaag</p>
                         <p>Tita Cecilia Banaag</p>
-                        
                     </div>
 
                     <div class="column">
                         <h2>Guests Name</h2>
-                          <p>Tita Novabibi Ucab</p>
-                          <p>Tita Chai Gratil</p>
-                          <p>Tita Remedios Salas</p>
-                          <p>Tita Jsel Bacelides</p>
-                          <p>Tita Arianne Macaraeg</p>
-                          <p>Tita Roselyn Luna</p>
-                          <p>Tita Allan Banaag</p>
-                          <p>Tita Mary Ubas</p>
-                          <p>Ate Luz Angeline Castro</p>
+                        <p>Tita Novabibi Ucab</p>
+                        <p>Tita Chai Gratil</p>
+                        <p>Tita Remedios Salas</p>
+                        <p>Tita Jsel Bacelides</p>
+                        <p>Tita Arianne Macaraeg</p>
+                        <p>Tita Roselyn Luna</p>
+                        <p>Tita Allan Banaag</p>
+                        <p>Tita Mary Ubas</p>
+                        <p>Ate Luz Angeline Castro</p>
                     </div>
                 </div>
             </div>
@@ -56,4 +55,26 @@
     </div>
 
 </body>
+ <!-- Background music -->
+    <audio id="backgroundMusic" autoplay loop preload="auto" volume="0.5">
+        <source src="Taylor Swift - Enchanted (Taylor's Version) (Lyric Video).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playAudio() {
+            const audio = document.getElementById("backgroundMusic");
+            if (audio) {
+                audio.volume = 0.5;
+                audio.play().catch(e => console.log('Audio play failed:', e));
+            }
+        }
+
+        // Try autoplay on multiple events for better reliability
+        document.addEventListener('DOMContentLoaded', playAudio);
+        window.addEventListener('load', playAudio);
+        // Fallback: play on first user interaction
+        document.addEventListener('click', playAudio, { once: true });
+        document.addEventListener('touchstart', playAudio, { once: true });
+    </script>
 </html>

@@ -35,21 +35,19 @@
                         <p>Jb Dela Cruz</p>
                         <p>Aisaiah Magnawa</p>
                         <p>Aldrin Grande</p>
-
-                        
                     </div>
 
                     <div class="column">
                         <h2>Guests Name</h2>
-                           <p>Addee De Castro</p>
-                           <p>Charles Narciso</p>
-                           <p>Jake Gabrentina</p>
-                           <p>Khyle Sy</p>
-                           <p>Charles Espaldon</p>
-                           <p>Ej Gratil</p>
-                           <p>Llance Gratil</p>
-                           <p>Mikael Gratil</p>
-                           <p>Steven Taroy</p>
+                        <p>Addee De Castro</p>
+                        <p>Charles Narciso</p>
+                        <p>Jake Gabrentina</p>
+                        <p>Khyle Sy</p>
+                        <p>Charles Espaldon</p>
+                        <p>Ej Gratil</p>
+                        <p>Llance Gratil</p>
+                        <p>Mikael Gratil</p>
+                        <p>Steven Taroy</p>
                     </div>
                 </div>
             </div>
@@ -57,4 +55,26 @@
     </div>
 
 </body>
+ <!-- Background music -->
+    <audio id="backgroundMusic" autoplay loop preload="auto" volume="0.5">
+        <source src="Taylor Swift - Enchanted (Taylor's Version) (Lyric Video).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playAudio() {
+            const audio = document.getElementById("backgroundMusic");
+            if (audio) {
+                audio.volume = 0.5;
+                audio.play().catch(e => console.log('Audio play failed:', e));
+            }
+        }
+
+        // Try autoplay on multiple events for better reliability
+        document.addEventListener('DOMContentLoaded', playAudio);
+        window.addEventListener('load', playAudio);
+        // Fallback: play on first user interaction
+        document.addEventListener('click', playAudio, { once: true });
+        document.addEventListener('touchstart', playAudio, { once: true });
+    </script>
 </html>
