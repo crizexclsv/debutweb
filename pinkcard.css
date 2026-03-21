@@ -1,31 +1,39 @@
 body{
     margin:0;
     font-family: 'Libre Baskerville', serif;
-    background-image: url('ki.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
 }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('ki.jpg');
+.page-front {
+    height: 100vh;
+    background-image: url('tr.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(3  px);
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: high-quality;
 }
 
-/* floral background */
+.page-back {
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(116, 164, 255) 0%, rgb(73, 73, 192) 33%, rgb(98, 81, 175) 66%, rgb(143, 186, 243) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Parchment now no bg image */
 .background{
-    background-image:url("ki.jpg");
-    background-size:cover;
-    background-position:center;
-    min-height:100vh;
+    min-height: 80vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -35,7 +43,7 @@ body::before {
 .scroll {
     width: 600px;
     padding: 100px 50px 80px; 
-    max-height: 70vh;
+    max-height: 80vh;
     overflow-y: auto;
     background: linear-gradient(#f7e4b5, #f2d39c);
     border-radius: 20px 20px 8px 8px;
@@ -111,4 +119,35 @@ p{
     text-align:center;
     margin:6px 0;
     color: #6b5533;
+}
+
+@media screen {
+    .page-back {
+        min-height: 100vh;
+    }
+}
+
+@media print {
+    .page-front, .page-back {
+        height: 297mm !important;
+        width: 210mm !important;
+        margin: 0;
+        padding: 0;
+        break-after: page;
+    }
+    .page-front {
+        background-size: contain !important;
+        image-rendering: -webkit-optimize-contrast;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    .scroll {
+        max-height: none !important;
+        overflow: visible !important;
+        width: 80%;
+        max-width: 500px;
+    }
 }
