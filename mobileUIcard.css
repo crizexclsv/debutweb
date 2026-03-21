@@ -729,7 +729,7 @@
 @media (max-width: 480px) {
     .pagefour .image-frame.gallery1 {
         width: 95vw !important;
-        height: 110px !important;
+        height: 150px !important;
         border-radius: 6px !important;
     }
 }
