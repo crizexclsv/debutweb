@@ -107,10 +107,10 @@
 .frame {
     position: relative;
     top: auto;
-    left: 10px;
+    left: -55px;
     margin: 20px auto;
-    width: clamp(200px, 60vw, 80%);
-    height: clamp(250px, 35vh, 300px);
+    width: clamp(600px, 60vw, 800px) !important;
+    height: clamp(400px, 35vh, 1000px) !important;
     background-image: url('fr.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -172,7 +172,7 @@
     text-align: center;
     margin: 0 auto;
     width: clamp(280px, 90vw, 500px);
-    height: clamp(20px, 90vw, 175px);
+    height: clamp(50px, 90vw, 200px);
     padding: clamp(15px, 5vh, 30px);
     border-radius: 20px;
     background: linear-gradient(180deg, #BACFFE,#3B78FD, #94B5FE);
@@ -218,7 +218,7 @@
     position: relative !important;
     top: clamp(10px, 25vh, 25px) !important;
     right: auto !important;
-    left: 50% !important;
+    left: 51.1% !important;
     transform: translateX(-50%) !important;
     display: flex !important;
     flex-direction: row !important;
