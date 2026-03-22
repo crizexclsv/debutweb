@@ -1,4 +1,4 @@
-dein /* Mobile Base (<=1024px) - Shared Android/iOS overrides from desktop redcard.css */
+/* Mobile Base */
 
 body {
     margin: 0;
@@ -12,7 +12,7 @@ body {
     opacity: 1;
 }
 
-/* Mobile Front Page: Compact full-screen */
+/* FRONT PAGE */
 .page-front {
     height: 100vh;
     min-height: 100vh;
@@ -21,10 +21,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    image-rendering: -webkit-optimize-contrast;
     animation: fadeInUp 0.8s ease-out;
 }
 
+/* TEXT */
 .front-text {
     position: absolute;
     top: 60%;
@@ -59,6 +59,7 @@ body {
     color: #f0e6d2;
 }
 
+/* GRADIENT */
 .page-front::after {
     content: '';
     position: absolute;
@@ -66,38 +67,52 @@ body {
     left: 0;
     right: 0;
     height: 25vh;
-    background-image: linear-gradient(transparent, rgba(189, 185, 185, 0.4));
-    background-blend-mode: screen;
+    background-image: linear-gradient(transparent, rgba(56, 32, 32, 0.4));
 }
 
-/* Mobile Back Page: Full-screen gradient bg */
+/* ✅ BACK PAGE (REAL FIX HERE) */
 .page-back {
-    height: 150vh;
+    height: 100vh;
     min-height: 100vh;
+    width: 100%;
+
     position: relative;
+
     background-image: url('candles.jpg');
-    background-size: 130% auto;
-    background-position: center;
-    background-blend-mode: overlay;
-    animation: fadeInUp 1s 0.2s ease-out both;
-    width: 110vw;
-    margin: 0 -5vw;
-    max-width: none;
+    background-size: auto 80% !important;
+    background-repeat: no-repeat;
+
+    /* 🔥 MAIN FIX */
+    background-position: center; /* perfectly centered */
+
+    /* 🔥 REMOVE ugly bars look */
+    background-color: rgb(111, 163, 223); /* blends better with your image */
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden; /* prevents weird extra space */
+
+    animation: fadeInUp 1s 0.2s ease-out both;
 }
 
+/* OPTIONAL: softer overlay instead of harsh blue */
 .page-back::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 20vh;
-    background: linear-gradient(rgba(167, 164, 164, 0.3), transparent);
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.4),
+        transparent 30%,
+        transparent 70%,
+        rgba(0,0,0,0.5)
+    );
+    pointer-events: none;
 }
 
+/* ANIMATION */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -109,46 +124,20 @@ body {
     }
 }
 
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-/* Mobile only (<=768px): back page wider/tall/static */
+/* MOBILE */
 @media (max-width: 768px) {
     .page-back {
-        background-size: 120%;
-        height: 40vh;
-        min-height: 75vh;
-        width: 100vw;
-        margin: 0;
-        max-width: none;
-        overflow: hidden;
-    }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-    .front-text {
-        padding: clamp(32px, 5vw, 40px) clamp(40px, 6vw, 50px);
-    }
-    .front-title {
-        font-size: clamp(2.2rem, 8vw, 2.8rem);
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .page-front, .page-back {
         height: 100vh;
-    }
-    .front-text {
-        width: clamp(70%, 80%, 85%);
-        padding: clamp(20px, 4vw, 32px) clamp(30px, 5vw, 45px);
+        min-height: 100vh;
+
+        background-size: auto 80% !important;
+        background-position: center;
     }
 }
 
-/* Reduced motion */
+/* REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
     .page-front, .page-back {
         animation: none;
     }
 }
-
