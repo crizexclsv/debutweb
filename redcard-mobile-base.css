@@ -1,4 +1,4 @@
-/* Mobile Base (<=1024px) - Shared Android/iOS overrides from desktop redcard.css */
+dein /* Mobile Base (<=1024px) - Shared Android/iOS overrides from desktop redcard.css */
 
 body {
     margin: 0;
@@ -76,14 +76,16 @@ body {
     min-height: 100vh;
     position: relative;
     background-image: url('roses.jpg');
-    background-size: cover;
+    background-size: 130% auto;
     background-position: center;
     background-blend-mode: overlay;
-    animation: gradientShift 10s ease infinite;
+    animation: fadeInUp 1s 0.2s ease-out both;
+    width: 110vw;
+    margin: 0 -5vw;
+    max-width: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeInUp 1s 0.2s ease-out both;
 }
 
 .page-back::before {
@@ -112,7 +114,18 @@ body {
     50% { background-position: 100% 50%; }
 }
 
-/* Responsive tablets/small screens */
+/* Mobile only (<=768px): back page wider/tall/static */
+@media (max-width: 768px) {
+    .page-back {
+        background-size: 120%;
+        height: 40vh;
+        min-height: 75vh;
+        width: 100vw;
+        margin: 0;
+        max-width: none;
+        overflow: hidden;
+    }
+}
 @media (min-width: 481px) and (max-width: 768px) {
     .front-text {
         padding: clamp(32px, 5vw, 40px) clamp(40px, 6vw, 50px);
