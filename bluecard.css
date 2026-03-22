@@ -1,7 +1,9 @@
-body{
-    margin:0;
+body {
+    margin: 0;
     font-family: 'Libre Baskerville', serif;
     overflow-x: hidden;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
 }
 
 .page {
@@ -9,43 +11,43 @@ body{
 }
 
 .page-front {
-    height: clamp(120vh, 150vh, 220vh);
-    background-image: url('jk.jpg');
+    height: clamp(180vh, 110vh, 500vh);
+    background-image: url('cat.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     image-rendering: -webkit-optimize-contrast;
-    animation: fadeInUp 1.2s ease-out;
+    animation: fadeInUp 1s ease-out;
 }
 
 .front-text {
     position: absolute;
-    top: 75%;
+    top: 65%;
     left: 50%;
-    width: clamp(80%, 60%, 60%);
+    width: clamp(85%, 70%, 60%);
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     z-index: 10;
-    background: rgba(0,0,0,0.3);
-    padding: clamp(20px, 40px, 40px) clamp(30px, 60px, 60px);
+    background: rgba(0,0,0,0.4);
+    padding: clamp(15px, 3vw, 40px) clamp(20px, 5vw, 60px);
     border-radius: 20px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(245, 245, 245, 0);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(245, 245, 245, 0.1);
 }
 
 .front-title {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    margin: 0 0 10px 0;
+    font-size: clamp(2rem, 7vw, 4rem);
+    margin: 0 0 8px 0;
     line-height: 1.2;
     color: #d6a760;
 }
 
 .front-subtitle {
-    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
     margin: 0;
     font-weight: 300;
     color: #d6a760;
@@ -57,24 +59,23 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-    height: 30vh;
-    background-image: linear-gradient(transparent, rgb(255, 255, 255));
+    height: clamp(20vh, 25vh, 30vh);
+    background-image: linear-gradient(transparent, rgba(189, 185, 185, 0.253));
     background-blend-mode: screen;  
 }
 
 .page-back {
-    min-height: 100vh;
-    height: 100vh;
+    height: clamp(305vh, 115vh, 500vh) !important;
     position: relative;
-    background-image: url(''), linear-gradient(45deg, rgb(179, 197, 230) 0%, rgb(88, 88, 199) 33%, rgb(79, 57, 175) 66%, rgb(143, 186, 243) 100%);
+    background-image: url('bluebills.jpg');
     background-size: cover, 400% 400%;
     background-position: center, center;
     background-blend-mode: overlay;
-    animation: gradientShift 5s ease infinite;
+    animation: gradientShift 8s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeInUp 1.8s 0.5s ease-out;
+    animation: fadeInUp 1.5s 0.3s ease-out both;
 }
 
 .page-back::before {
@@ -83,14 +84,14 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    height: 30vh;
-    background: linear-gradient(rgba(255,255,255,0.8), transparent);
+    height: clamp(20vh, 25vh, 30vh);
+    background: linear-gradient(rgba(167, 164, 164, 0.24), transparent);
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
@@ -104,218 +105,3 @@ body{
     100% { background-position: 0% 50%; }
 }
 
-/* Parchment now no bg image */
-.background{
-    min-height: 80vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-/* parchment paper */
-.scroll {
-    width: clamp(320px, 90vw, 600px);
-    padding: clamp(60px, 12vw, 100px) clamp(30px, 8vw, 50px) clamp(60px, 10vw, 80px);
-    max-height: 80vh;
-    overflow-y: auto;
-    background: linear-gradient(#f7e4b5, #f2d39c);
-    border-radius: clamp(12px, 3vw, 20px) clamp(12px, 3vw, 20px) clamp(6px, 1.5vw, 8px) clamp(6px, 1.5vw, 8px);
-    box-shadow: 0 0 clamp(15px, 4vw, 25px) rgba(0,0,0,0.4);
-    border: clamp(4px, 1.5vw, 8px) solid #d6a760;
-    position: relative;
-}
-
-/* Top cursive flourish */
-.scroll::before {
-    position: absolute;
-    top: clamp(-20px, -4vw, -25px);
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(24px, 6vw, 32px);
-    color: #8b5a2b;
-    background: linear-gradient(to right, #f5e8c7, #f2d39c);
-    padding: clamp(8px, 2vw, 12px) clamp(25px, 6vw, 40px);
-    border-radius: clamp(18px, 4vw, 25px) clamp(18px, 4vw, 25px) 0 0;
-    box-shadow: 0 clamp(-3px, -0.5vw, -2px) clamp(10px, 2.5vw, 12px) rgba(139,90,43,0.4);
-    z-index: 2;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    letter-spacing: 1px;
-}
-
-/* Bottom cursive flourish */
-.scroll::after {
-    position: absolute;
-    bottom: -22px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Great Vibes', cursive;
-    font-size: 30px;
-    color: #8b5a2b;
-    background: linear-gradient(to right, #f2d39c, #f5e8c7);
-    padding: 12px 40px;
-    border-radius: 0 0 25px 25px;
-    box-shadow: 0 4px 12px rgba(139,90,43,0.4);
-    z-index: 2;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    letter-spacing: 1px;
-}
-
-/* title */
-h1{
-    font-family:'Great Vibes', cursive;
-    font-size: clamp(2rem, 10vw, 50px);
-    text-align:center;
-    margin-bottom: clamp(20px, 6vw, 30px);
-    color: #835510;
-}
-
-/* columns */
-.columns{
-    display:flex;
-    justify-content:space-between;
-}
-
-.column{
-    width:45%;
-}
-
-/* subtitles */
-h2{
-    text-align:center;
-    margin-bottom: clamp(10px, 4vw, 15px);
-    color: #c58122;
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
-}
-
-/* list text */
-p{
-    text-align:center;
-    margin: clamp(4px, 1.5vw, 6px) 0;
-    color: #6b5533;
-    font-size: clamp(1rem, 3vw, 1.2rem);
-}
-
-/* ===== MOBILE & RESPONSIVE MEDIA QUERIES ===== */
-
-/* Mobile phones (max 480px) */
-@media (max-width: 480px) {
-    .columns {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .column {
-        width: 100%;
-    }
-    
-    .scroll {
-        padding: clamp(40px, 15vw, 80px) clamp(20px, 10vw, 40px) clamp(40px, 12vw, 60px) !important;
-        max-height: 85vh;
-        padding-top: max(env(safe-area-inset-top), 20px);
-        padding-bottom: max(env(safe-area-inset-bottom), 20px);
-    }
-    
-    .page-back {
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    
-    .background {
-        min-height: 90vh;
-        padding: 10px;
-    }
-}
-
-/* Landscape phones / small tablets (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .columns {
-        gap: 15px;
-    }
-    
-    .column {
-        width: 48%;
-    }
-    
-    h1 {
-        font-size: clamp(2.2rem, 8vw, 40px);
-    }
-}
-
-/* Tablets (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .scroll {
-        width: clamp(500px, 80vw, 550px);
-        padding: 80px 40px 60px;
-    }
-    
-    .columns {
-        gap: 10px;
-    }
-    
-    .column {
-        width: 48%;
-    }
-}
-
-/* High DPI / Retina displays (iOS, Android high-res) */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .page-front {
-        image-rendering: -webkit-optimize-contrast;
-    }
-    
-    .scroll {
-        box-shadow: 0 0 30px rgba(0,0,0,0.5);
-        border-width: clamp(5px, 1.8vw, 9px);
-    }
-}
-
-/* Touch devices (Android/iOS tablets/phones) */
-@media (pointer: coarse), (hover: none) {
-    p, h2 {
-        font-size: 1.1em;
-    }
-    
-    .column p {
-        padding: 8px 0;
-    }
-}
-
-/* iOS specific safe areas */
-@supports (padding: max(0px)) {
-    .scroll {
-        padding-top: max(20px, env(safe-area-inset-top));
-        padding-bottom: max(20px, env(safe-area-inset-bottom));
-    }
-}
-
-@media screen {
-    .page-back {
-        min-height: 100vh;
-    }
-}
-
-@media print {
-    .page-front, .page-back {
-        height: 297mm !important;
-        width: 210mm !important;
-        margin: 0;
-        padding: 0;
-        break-after: page;
-    }
-    .page-front {
-        background-size: contain !important;
-        image-rendering: -webkit-optimize-contrast;
-    }
-    
-    body {
-        margin: 0;
-    }
-    
-    .scroll {
-        max-height: none !important;
-        overflow: visible !important;
-        width: 80%;
-        max-width: 500px;
-    }
-}

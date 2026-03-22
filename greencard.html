@@ -2,60 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Maria Andrea's 18th Birthday</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="greencard.css">
+<link rel="stylesheet" href="greencard.css" media="screen and (min-width: 1025px)">
+<link rel="stylesheet" href="greencard-mobile-base.css" media="screen and (max-width: 1024px)">
+<link rel="stylesheet" href="greencard-ios.css" media="screen and (max-width: 1024px)">
+
+
+
+
+
+    <script>
+      (function() {
+        if (/Android/i.test(navigator.userAgent)) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'greencard-android.css';
+          document.head.appendChild(link);
+        } else if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'greencard-ios.css';
+          document.head.appendChild(link);
+        }
+      })();
+    </script>
+
+
 </head>
 <body>
 
     <!-- Front page: full photo -->
     <div class="page page-front">
         <div class="front-text">
-            <h1 class="front-title">You're invited to<br>18th Shots</h1>
+            <h1 class="front-title">You're invited to<br>18th Blue Bills</h1>
             <p class="front-subtitle">Please find your name here in the list</p>
         </div>
     </div>
 
     <!-- Back page: guest card -->
     <div class="page page-back">
-        <div class="background">
-            <div class="scroll">
-                <h1>18th Shots</h1>
-                <div class="columns">
+         </div>
+        
 
-                    <div class="column">
-                        <h2>Guests Name</h2>
-                        <p>Isaac Aguilar</p>
-                        <p>Jay Gervacio</p>
-                        <p>John Cris Javier</p>
-                        <p>Yuan Biluan</p>
-                        <p>James Serrano</p>
-                        <p>Uno Macho Bacho</p>
-                        <p>Jb Dela Cruz</p>
-                        <p>Aisaiah Magnawa</p>
-                        <p>Aldrin Grande</p>
-                    </div>
-
-                    <div class="column">
-                        <h2>Guests Name</h2>
-                        <p>Addee De Castro</p>
-                        <p>Charles Narciso</p>
-                        <p>Jake Gabrentina</p>
-                        <p>Khyle Sy</p>
-                        <p>Charles Espaldon</p>
-                        <p>Ej Gratil</p>
-                        <p>Llance Gratil</p>
-                        <p>Mikael Gratil</p>
-                        <p>Steven Taroy</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</body>
- <!-- Background music -->
+    <!-- Background music -->
     <audio id="backgroundMusic" autoplay loop preload="auto" volume="0.5">
         <source src="Taylor Swift - Enchanted (Taylor's Version) (Lyric Video).mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -77,4 +68,5 @@
         document.addEventListener('click', playAudio, { once: true });
         document.addEventListener('touchstart', playAudio, { once: true });
     </script>
+</body>
 </html>
