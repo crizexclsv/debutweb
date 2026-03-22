@@ -67,7 +67,7 @@ body {
 .page-back {
     height: clamp(305vh, 115vh, 500vh) !important;
     position: relative;
-    background-image: url('treas.jpg');
+    background-image: url('tr.jpg');
     background-size: cover, 400% 400%;
     background-position: center, center;
     background-blend-mode: overlay;
