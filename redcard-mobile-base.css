@@ -1,4 +1,18 @@
-/* Clean Mobile Front Page */
+/* Mobile Base */
+
+body {
+    margin: 0;
+    font-family: 'Libre Baskerville', serif;
+    overflow-x: hidden;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+}
+
+.page {
+    opacity: 1;
+}
+
+/* FRONT PAGE */
 .page-front {
     height: 100vh;
     min-height: 100vh;
@@ -7,12 +21,10 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
     animation: fadeInUp 0.8s ease-out;
 }
 
+/* TEXT */
 .front-text {
     position: absolute;
     top: 60%;
@@ -23,18 +35,15 @@
     color: white;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
     z-index: 10;
-    background: rgba(0,0,0,0.6); /* slightly darker but no blur */
+    background: rgba(0,0,0,0.5);
     padding: clamp(24px, 6vw, 48px) clamp(32px, 8vw, 64px);
     border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.2);
     box-sizing: border-box;
-
-    /* Removed blur */
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
 }
 
-/* Titles */
 .front-title {
     font-family: 'Great Vibes', cursive;
     font-size: clamp(1.8rem, 10vw, 3rem);
@@ -50,7 +59,70 @@
     color: #f0e6d2;
 }
 
-/* Remove top gradient from back page */
-.page-back::before {
-    display: none;
+/* GRADIENT */
+.page-front::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25vh;
+    background-image: linear-gradient(transparent, rgba(56, 32, 32, 0.4));
+}
+
+.page-back {
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+
+    background-image: url('roses.jpg');
+    background-size: auto 80% !important;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: rgb(111, 163, 223);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    animation: fadeInUp 1s 0.2s ease-out both;
+
+    /* 🔥 ADD THIS (ANTI-BLUR FIX) */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* ANIMATION */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .page-back {
+        height: 100vh;
+        min-height: 100vh;
+
+        background-size: auto 80% !important;
+        background-position: center;
+    }
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+    .page-front, .page-back {
+        animation: none;
+    }
 }
