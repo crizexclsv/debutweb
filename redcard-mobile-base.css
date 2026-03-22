@@ -1,18 +1,4 @@
-/* Mobile Base (<=1024px) - Shared Android/iOS overrides from desktop redcard.css */
-
-body {
-    margin: 0;
-    font-family: 'Libre Baskerville', serif;
-    overflow-x: hidden;
-    touch-action: manipulation;
-    -webkit-overflow-scrolling: touch;
-}
-
-.page {
-    opacity: 1;
-}
-
-/* Mobile Front Page: Compact full-screen */
+/* Clean Mobile Front Page */
 .page-front {
     height: 100vh;
     min-height: 100vh;
@@ -37,15 +23,18 @@ body {
     color: white;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
     z-index: 10;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6); /* slightly darker but no blur */
     padding: clamp(24px, 6vw, 48px) clamp(32px, 8vw, 64px);
     border-radius: 24px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.2);
     box-sizing: border-box;
+
+    /* Removed blur */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
+/* Titles */
 .front-title {
     font-family: 'Great Vibes', cursive;
     font-size: clamp(1.8rem, 10vw, 3rem);
@@ -61,102 +50,7 @@ body {
     color: #f0e6d2;
 }
 
-.page-front::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 25vh;
-    background-image: linear-gradient(transparent, rgba(189, 185, 185, 0.4));
-    background-blend-mode: screen;
-}
-
-/* Mobile Back Page: Full-screen gradient bg */
-.page-back {
-    height: 100dvh;
-    min-height: 100dvh;
-    position: relative;
-    background-image: url('roses.jpg');
-    background-size: cover;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-    background-position: center;
-    background-blend-mode: overlay;
-    animation: fadeInUp 1s 0.2s ease-out both;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Remove top gradient from back page */
 .page-back::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 20vh;
-    background: linear-gradient(rgba(167, 164, 164, 0.3), transparent);
+    display: none;
 }
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-/* Mobile only (<=768px): back page wider/tall/static */
-@media (max-width: 768px) {
-.page-back {
-        background-size: cover;
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-        image-rendering: pixelated;
-        height: 100dvh;
-        min-height: 100dvh;
-        width: 100vw;
-        margin: 0;
-        max-width: none;
-        overflow: hidden;
-    }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-    .front-text {
-        padding: clamp(32px, 5vw, 40px) clamp(40px, 6vw, 50px);
-    }
-    .front-title {
-        font-size: clamp(2.2rem, 8vw, 2.8rem);
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .page-front, .page-back {
-        height: 100vh;
-    }
-    .front-text {
-        width: clamp(70%, 80%, 85%);
-        padding: clamp(20px, 4vw, 32px) clamp(30px, 5vw, 45px);
-    }
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-    .page-front, .page-back {
-        animation: none;
-    }
-}
-
