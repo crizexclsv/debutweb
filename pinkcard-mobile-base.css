@@ -79,7 +79,7 @@ body {
     position: relative;
 
     /* Sharp, centered background */
-    background-image: url('candles.jpg');
+    background-image: url('ca.jpg');
     background-size: 100% !important; /* changed from auto 80% */
     background-position: center center;
     background-repeat: no-repeat;
