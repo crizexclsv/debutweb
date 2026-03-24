@@ -1,9 +1,11 @@
+//Greet with name from input name
 document.addEventListener('DOMContentLoaded', function() {
     const username = localStorage.getItem('username');
     const intro = document.getElementById('intro');
     if (username && intro) {
         intro.textContent = `Hi, ${username}!`;
     }
+
     const backToIntroBtn = document.getElementById('backToIntroBtn');
     if (backToIntroBtn) {
         backToIntroBtn.addEventListener('click', function() {
@@ -12,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-const debutDate = new Date("Mar 26, 2026 12:00:00").getTime();
+
+//Countdown to Birthday
+const debutDate = new Date("Mar 26, 2026 24:00:00").getTime();
 
 setInterval(() => {
 
@@ -31,88 +35,65 @@ setInterval(() => {
 }, 1000);
 
 
-const cards = document.querySelectorAll('.namecontainer');
 
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    const id = card.getAttribute('data-id');
-    alert(`You clicked on card ${id}!`);
-  });
-});
 
-// Fullscreen map image
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
-  const mapImg = document.getElementById('map-img');
-  if (mapImg) {
-    mapImg.addEventListener('click', () => {
-      const modal = document.createElement('div');
-      modal.className = 'fullscreen-modal';
-      const img = document.createElement('img');
-      img.src = mapImg.src;
-      img.className = 'fullscreen-img';
-      modal.appendChild(img);
-      document.body.appendChild(modal);
-      modal.addEventListener('click', () => modal.remove());
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') modal.remove();
-      }, {once: true});
-    });
-  }
+    const imageFrames = document.querySelectorAll('.image-frame');
+    const preview = document.getElementById('preview');
+    const previewImg = document.getElementById('preview-img');
 
-  // Fullscreen for QR code image
-  const qrImg = document.querySelector('.qr-section img');
-  if (qrImg) {
-    qrImg.addEventListener('click', () => {
-      const modal = document.createElement('div');
-      modal.className = 'fullscreen-modal';
-      const fullImg = document.createElement('img');
-      fullImg.src = qrImg.src;
-      fullImg.className = 'fullscreen-img';
-      modal.appendChild(fullImg);
-      document.body.appendChild(modal);
-      modal.addEventListener('click', () => modal.remove());
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') modal.remove();
-      }, {once: true});
+    // Open preview on click
+    imageFrames.forEach(frame => {
+        frame.addEventListener('click', () => {
+            const img = frame.querySelector('img');
+            previewImg.src = img.src;
+            preview.style.display = 'flex';
+        });
     });
-  }
 
-  // Fullscreen for image-frame images
-  const frameImgs = document.querySelectorAll('.image-frame img');
-  frameImgs.forEach(img => {
-    img.addEventListener('click', () => {
-      const modal = document.createElement('div');
-      modal.className = 'fullscreen-modal';
-      const fullImg = document.createElement('img');
-      fullImg.src = img.src;
-      fullImg.className = 'fullscreen-img';
-      modal.appendChild(fullImg);
-      document.body.appendChild(modal);
-      modal.addEventListener('click', () => modal.remove());
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') modal.remove();
-      }, {once: true});
+    // Close preview on click outside
+    preview.addEventListener('click', () => {
+        preview.style.display = 'none';
+        previewImg.src = '';
     });
-  });
 
-  // Fullscreen for .photo images (dress code page)
-  const photoImgs = document.querySelectorAll('.photo');
-  photoImgs.forEach(img => {
-    img.addEventListener('click', () => {
-      const modal = document.createElement('div');
-      modal.className = 'fullscreen-modal';
-      const fullImg = document.createElement('img');
-      fullImg.src = img.src;
-      fullImg.className = 'fullscreen-img';
-      modal.appendChild(fullImg);
-      document.body.appendChild(modal);
-      modal.addEventListener('click', () => modal.remove());
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') modal.remove();
-      }, {once: true});
+    // Close preview on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            preview.style.display = 'none';
+            previewImg.src = '';
+        }
     });
-  });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Autoplay music inside DOM ready
 document.addEventListener('DOMContentLoaded', function() {

@@ -213,8 +213,8 @@
 }
 
 .pagetwo .image-container-right {
-    width: clamp(380px, 95vw, 500px) !important;
-    height: clamp(160px, 38vh, 230px) !important;
+    width: clamp(380px, 95vw, 300px) !important;
+    height: clamp(160px, 38vh, 200px) !important;
     position: relative !important;
     top: clamp(10px, 25vh, 25px) !important;
     right: auto !important;
@@ -687,7 +687,7 @@
     width: 92% !important;
     max-width: 320px !important;
     margin-top: 45px !important;
-    margin-left: 30px !important;
+    margin-left: 5px !important;
     aspect-ratio: 16 / 9 !important;
     height: 120px !important;
     margin: 0 auto;
