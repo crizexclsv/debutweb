@@ -699,11 +699,11 @@ text-shadow: #000000 1px 5px 12px;
 
 
 .pagefour .image-frame.gallery1 {
-    margin-top: -80px;
+    margin-top: 50px;
     margin-bottom: 20px;
     margin-right: 10px;
-    width: 62pc !important;
-    height: 350px;
+    width: 48pc !important;
+    height: 300px;
     overflow: hidden;
     border-radius: 15px;
     transform: rotate(-10deg);
@@ -713,7 +713,7 @@ text-shadow: #000000 1px 5px 12px;
 .image-frame.gallery1 img {
     cursor: pointer;
     transition: transform 0.3s ease;
-    height: 600px;
+    height: 420px;
 }
 
 .image-frame.gallery1 img:hover {
@@ -721,8 +721,8 @@ text-shadow: #000000 1px 5px 12px;
 }
 
 .image-frame.middle.gallery2 {
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 350px;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 10px 90px rgba(0, 0, 0, 0.5);
@@ -741,8 +741,8 @@ text-shadow: #000000 1px 5px 12px;
 }
 
 .image-frame.lean.gallery3 {
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 300px;
     margin-right: 10px;
     overflow: hidden;
     border-radius: 15px;
